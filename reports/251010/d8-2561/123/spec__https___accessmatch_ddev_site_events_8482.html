@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://accessmatch.ddev.site/events/8482</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 10/10/2025, 10:34:34 AM</p>
+        <p><strong>Total Violations:</strong> 7</p>
+        <p><strong>Critical:</strong> 0</p>
+        <p><strong>Serious:</strong> 3</p>
+        <p><strong>Moderate:</strong> 4</p>
+        <p><strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation serious">
+        <h3>aria-prohibited-attr - Elements must only use permitted ARIA attributes</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure ARIA attributes are not prohibited for an element's role</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/aria-prohibited-attr?application=axeAPI" target="_blank">Elements must only use permitted ARIA attributes</a></p>
+        <p><strong>Tags:</strong> cat.aria, wcag2a, wcag412, EN-301-549, EN-9.4.1.2</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div aria-live="polite" aria-label="Bot response updates" class="sr-only" id="bot-live-region"&gt;&lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> #qa-bot,#bot-live-region</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  aria-label attribute cannot be used on a div with no valid role attribute.</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>color-contrast - Elements must meet minimum color contrast ratio thresholds</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI" target="_blank">Elements must meet minimum color contrast ratio thresholds</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2aa, wcag143, TTv5, TT13.c, EN-301-549, EN-9.1.4.3, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;span&gt;Ask me about ACCESS! 😊&lt;/span&gt;</div>
+            <p class="target"><strong>Target:</strong> #qa-bot,.rcb-chat-tooltip > span:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 1.12 (foreground color: #ffffff, background color: #ebf3f4, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>html-has-lang - <html> element must have a lang attribute</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure every HTML document has a lang attribute</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/html-has-lang?application=axeAPI" target="_blank"><html> element must have a lang attribute</a></p>
+        <p><strong>Tags:</strong> cat.language, wcag2a, wcag311, TTv5, TT11.a, EN-301-549, EN-9.3.1.1, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;html class="access-support overflow-x-clip js"&gt;</div>
+            <p class="target"><strong>Target:</strong> html</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The <html> element does not have a lang attribute</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-main-is-top-level - Main landmark should not be contained in another landmark</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the main landmark is at top level</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-main-is-top-level?application=axeAPI" target="_blank">Main landmark should not be contained in another landmark</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;main role="main" aria-label="Chat interface"&gt;</div>
+            <p class="target"><strong>Target:</strong> #qa-bot,main[aria-label="Chat interface"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The main landmark is contained in another landmark.</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-no-duplicate-main - Document should not have more than one main landmark</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the document has at most one main landmark</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-main?application=axeAPI" target="_blank">Document should not have more than one main landmark</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;main role="main" class="grid grid-cols-1 gap-5 py-5 md--grid-cols-[1fr_25%] container"&gt;</div>
+            <p class="target"><strong>Target:</strong> .grid</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Document has more than one main landmark</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-unique - Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure landmarks are unique</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=axeAPI" target="_blank">Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;nav class="menu universal"&gt;</div>
+            <p class="target"><strong>Target:</strong> #universal-menus,.universal</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (4)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div class="container"&gt;</div>
+            <p class="target"><strong>Target:</strong> #header,.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#main-content" class="visually-hidden focusable skip-link"&gt;
+      Skip to main content
+    &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .focusable</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="container prose"&gt;</div>
+            <p class="target"><strong>Target:</strong> .prose.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="container"&gt;</div>
+            <p class="target"><strong>Target:</strong> #footer,.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>
