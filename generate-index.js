@@ -152,8 +152,24 @@ const summaryFiles = findSummaryFiles(reportsDir);
 
 console.log(`Found ${summaryFiles.length} summary files`);
 
-// Sort by modification time, most recent first
-summaryFiles.sort((a, b) => b.mtimeMs - a.mtimeMs);
+// Sort by workflow run ID (descending) as primary sort
+// This is more reliable than file modification time for determining recency
+summaryFiles.sort((a, b) => {
+  const aInfo = parseReportPath(a.path);
+  const bInfo = parseReportPath(b.path);
+  
+  if (aInfo && bInfo) {
+    // Primary sort: workflow run ID (higher = more recent)
+    const aRunId = parseInt(aInfo.workflowRunId, 10);
+    const bRunId = parseInt(bInfo.workflowRunId, 10);
+    if (bRunId !== aRunId) {
+      return bRunId - aRunId;
+    }
+  }
+  
+  // Secondary sort: file modification time
+  return b.mtimeMs - a.mtimeMs;
+});
 
 // Generate HTML
 const html = generateHTML(summaryFiles);
