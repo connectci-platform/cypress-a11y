@@ -114,7 +114,7 @@ function generateHTML(reports) {
     <h1>Accessibility Test Reports Index</h1>
 
     <div class="last-updated">
-        Last updated: ${new Date().toLocaleString()}
+        Last updated: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York', timeZoneName: 'short' })}
     </div>
 
     <div class="summary">
