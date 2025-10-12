@@ -5,16 +5,16 @@ const path = require('path');
 
 function findSummaryFiles(dir) {
   const results = [];
-  
+
   function traverse(currentPath, depth = 0) {
     if (depth > 10) return; // Prevent infinite loops
-    
+
     try {
       const entries = fs.readdirSync(currentPath, { withFileTypes: true });
-      
+
       for (const entry of entries) {
         const fullPath = path.join(currentPath, entry.name);
-        
+
         if (entry.isDirectory()) {
           traverse(fullPath, depth + 1);
         } else if (entry.name === 'summary.html') {
@@ -31,7 +31,7 @@ function findSummaryFiles(dir) {
       console.error(`Error reading directory ${currentPath}:`, err.message);
     }
   }
-  
+
   traverse(dir);
   return results;
 }
@@ -39,12 +39,12 @@ function findSummaryFiles(dir) {
 function parseReportPath(reportPath) {
   // Expected format: reports/YYYYMMDD/{branch-or-ref}/{workflow-run-id}/summary.html
   const parts = reportPath.split(path.sep);
-  
+
   if (parts.length >= 5 && parts[0] === 'reports' && parts[parts.length - 1] === 'summary.html') {
     const date = parts[1]; // YYYYMMDD
     const branchOrRef = parts.slice(2, -2).join('/'); // Everything between date and workflow-run-id
     const workflowRunId = parts[parts.length - 2];
-    
+
     return {
       date,
       branchOrRef,
@@ -53,7 +53,7 @@ function parseReportPath(reportPath) {
       displayBranch: formatBranch(branchOrRef)
     };
   }
-  
+
   return null;
 }
 
@@ -81,12 +81,12 @@ function generateHTML(reports) {
   const rows = reports.map(report => {
     const info = parseReportPath(report.path);
     if (!info) return '';
-    
+
     return `            <tr>
                 <td>${info.displayDate}</td>
                 <td>${info.displayBranch}</td>
                 <td>${info.workflowRunId}</td>
-                <td><a href="${report.path}" target="_blank">View Report</a></td>
+                <td><a href="${report.path}">View Report</a></td>
             </tr>`;
   }).join('\n');
 
@@ -112,11 +112,11 @@ function generateHTML(reports) {
 </head>
 <body>
     <h1>Accessibility Test Reports Index</h1>
-    
+
     <div class="last-updated">
         Last updated: ${new Date().toLocaleString()}
     </div>
-    
+
     <div class="summary">
         <p><strong>Total Reports:</strong> ${reports.length}</p>
         <p>This page lists all accessibility test reports, with the most recent listed first.</p>
@@ -157,7 +157,7 @@ console.log(`Found ${summaryFiles.length} summary files`);
 summaryFiles.sort((a, b) => {
   const aInfo = parseReportPath(a.path);
   const bInfo = parseReportPath(b.path);
-  
+
   if (aInfo && bInfo) {
     // Primary sort: workflow run ID (higher = more recent)
     const aRunId = parseInt(aInfo.workflowRunId, 10);
@@ -166,7 +166,7 @@ summaryFiles.sort((a, b) => {
       return bRunId - aRunId;
     }
   }
-  
+
   // Secondary sort: file modification time
   return b.mtimeMs - a.mtimeMs;
 });
