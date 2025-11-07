@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://accessmatch.ddev.site/knowledge-base/overview</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 11/7/2025, 7:27:16 PM</p>
+        <p><strong>Total Violations:</strong> 3</p>
+        <p><strong>Critical:</strong> 1</p>
+        <p><strong>Serious:</strong> 0</p>
+        <p><strong>Moderate:</strong> 2</p>
+        <p><strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation moderate">
+        <h3>heading-order - Heading levels should only increase by one</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the order of headings is semantically correct</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI" target="_blank">Heading levels should only increase by one</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;h3 class="text-white mt-0"&gt;Search ACCESS&lt;/h3&gt;</div>
+            <p class="target"><strong>Target:</strong> .bg-dark-teal.p-5:nth-child(1) > .mt-0.text-white</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Heading order invalid</div>
+        </div>
+    </div>
+    <div class="violation critical">
+        <h3>image-alt - Images must have alternative text</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure <img> elements have alternative text or a role of none or presentation</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt?application=axeAPI" target="_blank">Images must have alternative text</a></p>
+        <p><strong>Tags:</strong> cat.text-alternatives, wcag2a, wcag111, section508, section508.22.a, TTv5, TT7.a, TT7.b, EN-301-549, EN-9.1.1.1, ACT</p>
+        <h4>Affected Elements (6)</h4>
+
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/ACCESS-arrrow.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-orange > .h-16.not-prose</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/vlc.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange.group:nth-child(2) > .h-16.not-prose</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/ara.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange.group:nth-child(3) > .h-16.not-prose</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="w-20  mb-2 md--mx-auto not-prose" src="/themes/contrib/asp-theme/images/icons/ico-documentation.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .md--flex-col > .w-20.md--mx-auto.not-prose</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="w-20 mb-2 md--mx-auto not-prose" src="/themes/contrib/asp-theme/images/icons/askci.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .md-items-center > .w-20.md--mx-auto.not-prose</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="w-20 mb-2 md--mx-auto not-prose" src="/themes/contrib/asp-theme/images/icons/cilinks.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .md--justify-center > .w-20.md--mx-auto.not-prose</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (4)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div class="container"&gt;</div>
+            <p class="target"><strong>Target:</strong> #header,.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#main-content" class="visually-hidden focusable skip-link"&gt;
+      Skip to main content
+    &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .focusable</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="container prose"&gt;</div>
+            <p class="target"><strong>Target:</strong> .layout-container > .prose.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="container"&gt;</div>
+            <p class="target"><strong>Target:</strong> #footer,.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>

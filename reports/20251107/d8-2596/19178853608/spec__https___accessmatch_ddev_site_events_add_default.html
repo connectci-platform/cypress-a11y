@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://accessmatch.ddev.site/events/add/default</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 11/7/2025, 7:28:48 PM</p>
+        <p><strong>Total Violations:</strong> 4</p>
+        <p><strong>Critical:</strong> 1</p>
+        <p><strong>Serious:</strong> 0</p>
+        <p><strong>Moderate:</strong> 2</p>
+        <p><strong>Minor:</strong> 1</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation critical">
+        <h3>aria-allowed-attr - Elements must only use supported ARIA attributes</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure an element's role supports its ARIA attributes</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/aria-allowed-attr?application=axeAPI" target="_blank">Elements must only use supported ARIA attributes</a></p>
+        <p><strong>Tags:</strong> cat.aria, wcag2a, wcag412, EN-301-549, EN-9.4.1.2</p>
+        <h4>Affected Elements (2)</h4>
+
+        <div class="node">
+            <div class="code">&lt;fieldset data-drupal-selector="edit-recur-type" aria-describedby="edit-recur-type--wrapper--description" id="edit-recur-type--wrapper" class="fieldgroup form-composite required js-form-item form-item js-form-wrapper form-wrapper" required="required" aria-required="true"&gt;</div>
+            <p class="target"><strong>Target:</strong> #edit-recur-type--wrapper</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  ARIA attribute is not allowed: aria-required="true"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;fieldset data-drupal-selector="edit-field-event-type" id="edit-field-event-type--wrapper" class="fieldgroup form-composite required js-form-item form-item js-form-wrapper form-wrapper" required="required" aria-required="true"&gt;</div>
+            <p class="target"><strong>Target:</strong> #edit-field-event-type--wrapper</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  ARIA attribute is not allowed: aria-required="true"</div>
+        </div>
+    </div>
+    <div class="violation minor">
+        <h3>empty-table-header - Table header text should not be empty</h3>
+        <p class="impact minor">Impact: minor</p>
+        <p><strong>Description:</strong> Ensure table headers have discernible text</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/empty-table-header?application=axeAPI" target="_blank">Table header text should not be empty</a></p>
+        <p><strong>Tags:</strong> cat.name-role-value, best-practice</p>
+        <h4>Affected Elements (2)</h4>
+
+        <div class="node">
+            <div class="code">&lt;th&gt;&lt;/th&gt;</div>
+            <p class="target"><strong>Target:</strong> #field-event-speakers-values > thead > tr > th:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;th&gt;&lt;/th&gt;</div>
+            <p class="target"><strong>Target:</strong> #field-affinity-group-node-values > thead > tr > th:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>heading-order - Heading levels should only increase by one</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the order of headings is semantically correct</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI" target="_blank">Heading levels should only increase by one</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;h4 class="label form-required mt-4"&gt;Summary&lt;/h4&gt;</div>
+            <p class="target"><strong>Target:</strong> #field-summary-replace > .mt-4.form-required</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Heading order invalid</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (5)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div class="container"&gt;</div>
+            <p class="target"><strong>Target:</strong> #header,.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#main-content" class="visually-hidden focusable skip-link"&gt;
+      Skip to main content
+    &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .focusable</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div id="toolbar-administration" role="group" aria-label="Site administration toolbar" data-drupal-claro-processed-toolbar="" class="toolbar claro-toolbar toolbar-oriented" data-once="toolbar toolbarAntiFlicker"&gt;</div>
+            <p class="target"><strong>Target:</strong> #toolbar-administration</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="container prose"&gt;</div>
+            <p class="target"><strong>Target:</strong> .layout-container > .prose.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="container"&gt;</div>
+            <p class="target"><strong>Target:</strong> #footer,.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>
