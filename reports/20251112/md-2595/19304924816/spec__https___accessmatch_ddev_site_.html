@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://accessmatch.ddev.site/</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 11/12/2025, 4:50:14 PM</p>
+        <p><strong>Total Violations:</strong> 5</p>
+        <p><strong>Critical:</strong> 2</p>
+        <p><strong>Serious:</strong> 0</p>
+        <p><strong>Moderate:</strong> 2</p>
+        <p><strong>Minor:</strong> 1</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation minor">
+        <h3>empty-heading - Headings should not be empty</h3>
+        <p class="impact minor">Impact: minor</p>
+        <p><strong>Description:</strong> Ensure headings have discernible text</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/empty-heading?application=axeAPI" target="_blank">Headings should not be empty</a></p>
+        <p><strong>Tags:</strong> cat.name-role-value, best-practice</p>
+        <h4>Affected Elements (4)</h4>
+
+        <div class="node">
+            <div class="code">&lt;h3 class="text-center overflow-wrap-anywhere group-hover--text-md-teal uppercase"&gt;&lt;/h3&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="ondemand"] > .uppercase</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;h3 class="text-center overflow-wrap-anywhere group-hover--text-md-teal uppercase"&gt;&lt;/h3&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="pegasus"] > .uppercase</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;h3 class="text-center overflow-wrap-anywhere group-hover--text-md-teal uppercase"&gt;&lt;/h3&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="xdmod"] > .uppercase</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;h3 class="text-center overflow-wrap-anywhere group-hover--text-md-teal uppercase"&gt;&lt;/h3&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="badges"] > .uppercase</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>heading-order - Heading levels should only increase by one</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the order of headings is semantically correct</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI" target="_blank">Heading levels should only increase by one</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;h3 class="mt-0 text-white"&gt;Announcements&lt;/h3&gt;</div>
+            <p class="target"><strong>Target:</strong> .view-access-news > .view-header > .mt-0</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Heading order invalid</div>
+        </div>
+    </div>
+    <div class="violation critical">
+        <h3>image-alt - Images must have alternative text</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure <img> elements have alternative text or a role of none or presentation</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt?application=axeAPI" target="_blank">Images must have alternative text</a></p>
+        <p><strong>Tags:</strong> cat.text-alternatives, wcag2a, wcag111, section508, section508.22.a, TTv5, TT7.a, TT7.b, EN-301-549, EN-9.1.1.1, ACT</p>
+        <h4>Affected Elements (12)</h4>
+
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/ACCESS-arrrow.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-orange > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/vlc.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="video-learning-center"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/ara.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="ara.access-ci.org/"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/ico-documentation.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange.group:nth-child(4) > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/askci.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange.group:nth-child(5) > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/cilinks.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="resources"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/logos/access-ondemand.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="ondemand"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/logos/pegasus-horizontal-teal.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="pegasus"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/logos/xdmod-dk.png"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="xdmod"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/affinity-groups.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="affinity_groups"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/themes/contrib/asp-theme/images/icons/join-the-cssn.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="cssn"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img class="not-prose block h-16" src="/sites/default/files/user/badges/badge-new-access%20.png"&gt;</div>
+            <p class="target"><strong>Target:</strong> .border-dark-teal.hover--border-orange[href$="badges"] > .not-prose.h-16</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation critical">
+        <h3>label - Form elements must have labels</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure every form element has a label</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI" target="_blank">Form elements must have labels</a></p>
+        <p><strong>Tags:</strong> cat.forms, wcag2a, wcag412, section508, section508.22.n, TTv5, TT5.c, EN-301-549, EN-9.4.1.2, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;textarea rows="1" class="rcb-chat-input-textarea" placeholder="" style="cursor: url(&quot;data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%20viewBox='0%200%2042%2042'%3e%3cpath%20style='fill:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke:%23b00000;stroke-opacity:1;stroke-miterlimit:4'%20d='M17%209a8%208%200%200%201-8%208%208%208%200%200%201-8-8%208%208%200%200%201%208-8%208%208%200%200%201%208%208Zm0%200'%20transform='rotate(.086)%20scale(1.77778)'/%3e%3cpath%20style='fill:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke:%23b00000;stroke-opacity:1;stroke-miterlimit:10'%20d='M14.66%2014.66%203.34%203.34'%20transform='rotate(.086)%20scale(1.77778)'/%3e%3c/svg%3e&quot;), auto; caret-color: transparent; box-sizing: content-box;"&gt;</div>
+            <p class="target"><strong>Target:</strong> .embedded-qa-bot[data-initialized="true"],textarea</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an implicit (wrapped) <label><br>  Element does not have an explicit <label><br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element has an empty placeholder attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (4)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div class="container"&gt;</div>
+            <p class="target"><strong>Target:</strong> #header,.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#main-content" class="visually-hidden focusable skip-link"&gt;
+      Skip to main content
+    &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .focusable</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="region region-cta h-full"&gt;</div>
+            <p class="target"><strong>Target:</strong> .region-cta</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="container"&gt;</div>
+            <p class="target"><strong>Target:</strong> #footer,.container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>
