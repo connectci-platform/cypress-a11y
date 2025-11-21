@@ -1,0 +1,2 @@
+impact,id,description,help,helpUrl,tags,html,target,failureSummary
+moderate,heading-order,"Ensure the order of headings is semantically correct","Heading levels should only increase by one","https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI","cat.semantics;best-practice","<h3 class=\"m-0 me-4 mr-3 pt-2\">Upcoming Events</h3>",".m-0","Fix any of the following:\n  Heading order invalid"
