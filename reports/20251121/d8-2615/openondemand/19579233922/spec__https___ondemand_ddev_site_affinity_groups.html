@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://ondemand.ddev.site/affinity-groups</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 11/21/2025, 6:09:33 PM</p>
+        <p><strong>Total Violations:</strong> 5</p>
+        <p><strong>Critical:</strong> 1</p>
+        <p><strong>Serious:</strong> 1</p>
+        <p><strong>Moderate:</strong> 3</p>
+        <p><strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation critical">
+        <h3>image-alt - Images must have alternative text</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure <img> elements have alternative text or a role of none or presentation</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt?application=axeAPI" target="_blank">Images must have alternative text</a></p>
+        <p><strong>Tags:</strong> cat.text-alternatives, wcag2a, wcag111, section508, section508.22.a, TTv5, TT7.a, TT7.b, EN-301-549, EN-9.1.1.1, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;img width="120" height="120" src="/themes/nect-theme/img/NSF_logo.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[width="120"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-one-main - Document should have one main landmark</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the document has a main landmark</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI" target="_blank">Document should have one main landmark</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;html lang="en" dir="ltr" class=" js"&gt;</div>
+            <p class="target"><strong>Target:</strong> html</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Document does not have a main landmark</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-unique - Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure landmarks are unique</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=axeAPI" target="_blank">Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;nav class="navbar navbar-expand secondary-nav navbar-light bg-light " id="secondaryNav"&gt;</div>
+            <p class="target"><strong>Target:</strong> #secondaryNav</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>link-name - Links must have discernible text</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure links have discernible text</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI" target="_blank">Links must have discernible text</a></p>
+        <p><strong>Tags:</strong> cat.name-role-value, wcag2a, wcag244, wcag412, section508, section508.22.a, TTv5, TT6.a, EN-301-549, EN-9.2.4.4, EN-9.4.1.2, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a class="nsf-logo" href="https://www.nsf.gov/" target="_blank" rel="noopener"&gt;
+              &lt;img width="120" height="120" src="/themes/nect-theme/img/NSF_logo.svg"&gt;
+            &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .nsf-logo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element is in tab order and does not have accessible text<br><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (27)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div id="block-ood-page-title"&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-ood-page-title</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div id="block-ood-oodaffinitygroupintro"&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-ood-oodaffinitygroupintro</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="text-right" style="margin-top:-2.5rem !important;" id="requestAffinityWide"&gt;&lt;a class="btn btn-sm btn-primary" href="https://ondemand.ddev.site/form/affinity-group-request"&gt;Request a Group&lt;/a&gt;&lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> #requestAffinityWide</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="views-element-container"&gt;</div>
+            <p class="target"><strong>Target:</strong> .views-element-container</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="js-form-item form-item js-form-type-textfield form-item-search-api-fulltext js-form-item-search-api-fulltext form-group"&gt;</div>
+            <p class="target"><strong>Target:</strong> .js-form-item</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;h2&gt;Tags&lt;/h2&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-ood-affinitysearchtags > h2</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-340"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(3) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-340"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(3) > label[for="affinity-search-tags-340"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-381"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(4) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-381"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(4) > label[for="affinity-search-tags-381"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-337"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(5) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-337"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(5) > label[for="affinity-search-tags-337"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-200"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(6) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-200"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(6) > label[for="affinity-search-tags-200"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-815"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(7) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-815"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(7) > label[for="affinity-search-tags-815"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-672"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(8) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-672"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(8) > label[for="affinity-search-tags-672"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-875"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(9) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-875"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(9) > label[for="affinity-search-tags-875"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-86"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(10) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-86"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(10) > label[for="affinity-search-tags-86"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-776"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(11) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-776"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(11) > label[for="affinity-search-tags-776"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="affinity-search-tags-746"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(12) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="affinity-search-tags-746"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="affinity_search_tags-0"] > .facet-item.list-none:nth-child(12) > label[for="affinity-search-tags-746"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#" class="facets-soft-limit-link"&gt;Show more&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-ood-affinitysearchtags > .mb-2.mb-lg-4.facets-widget-checkbox > .facets-soft-limit-link[href="#"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>

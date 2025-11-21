@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://ondemand.ddev.site/affinity-groups/ood-appverse</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 11/21/2025, 6:09:40 PM</p>
+        <p><strong>Total Violations:</strong> 7</p>
+        <p><strong>Critical:</strong> 1</p>
+        <p><strong>Serious:</strong> 2</p>
+        <p><strong>Moderate:</strong> 4</p>
+        <p><strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation serious">
+        <h3>color-contrast - Elements must meet minimum color contrast ratio thresholds</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI" target="_blank">Elements must meet minimum color contrast ratio thresholds</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2aa, wcag143, TTv5, TT13.c, EN-301-549, EN-9.1.4.3, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a href="/user" class="btn btn-secondary disabled my-2 ms-0 me-4  mr-4  ml-0" disabled=""&gt;Join&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .btn-secondary</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 2.48 (foreground color: #ffffff, background color: #9fa5ab, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1</div>
+        </div>
+    </div>
+    <div class="violation critical">
+        <h3>image-alt - Images must have alternative text</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure <img> elements have alternative text or a role of none or presentation</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt?application=axeAPI" target="_blank">Images must have alternative text</a></p>
+        <p><strong>Tags:</strong> cat.text-alternatives, wcag2a, wcag111, section508, section508.22.a, TTv5, TT7.a, TT7.b, EN-301-549, EN-9.1.1.1, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;img width="120" height="120" src="/themes/nect-theme/img/NSF_logo.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[width="120"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-no-duplicate-contentinfo - Document should not have more than one contentinfo landmark</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the document has at most one contentinfo landmark</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-contentinfo?application=axeAPI" target="_blank">Document should not have more than one contentinfo landmark</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div role="contentinfo" aria-label="Status message"&gt;
+    	  &lt;div class="alert alert-success"&gt;
+	              &lt;h2 class="visually-hidden"&gt;Status message&lt;/h2&gt;
+                    Simplelists key missing.
+          &lt;/div&gt;
+  &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> div[role="contentinfo"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Document has more than one contentinfo landmark</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-one-main - Document should have one main landmark</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the document has a main landmark</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI" target="_blank">Document should have one main landmark</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;html lang="en" dir="ltr" class=" js"&gt;</div>
+            <p class="target"><strong>Target:</strong> html</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Document does not have a main landmark</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-unique - Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure landmarks are unique</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=axeAPI" target="_blank">Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;nav class="navbar navbar-expand secondary-nav navbar-light bg-light " id="secondaryNav"&gt;</div>
+            <p class="target"><strong>Target:</strong> #secondaryNav</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>link-name - Links must have discernible text</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure links have discernible text</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI" target="_blank">Links must have discernible text</a></p>
+        <p><strong>Tags:</strong> cat.name-role-value, wcag2a, wcag244, wcag412, section508, section508.22.a, TTv5, TT6.a, EN-301-549, EN-9.2.4.4, EN-9.4.1.2, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a class="nsf-logo" href="https://www.nsf.gov/" target="_blank" rel="noopener"&gt;
+              &lt;img width="120" height="120" src="/themes/nect-theme/img/NSF_logo.svg"&gt;
+            &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .nsf-logo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element is in tab order and does not have accessible text<br><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (2)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div id="block-ood-page-title"&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-ood-page-title</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;article data-history-node-id="10884" class="mb-5"&gt;</div>
+            <p class="target"><strong>Target:</strong> article</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>
