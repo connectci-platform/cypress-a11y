@@ -1,0 +1,10 @@
+spec,url,violations,critical,serious,moderate,minor,csv,html
+"","https://connectci.ddev.site/",4,1,0,3,0,"spec__https___connectci_ddev_site_.csv","spec__https___connectci_ddev_site_.html"
+"","https://connectci.ddev.site/connectci-privacy-policy",2,0,0,2,0,"spec__https___connectci_ddev_site_connectci_privacy_policy.csv","spec__https___connectci_ddev_site_connectci_privacy_policy.html"
+"","https://connectci.ddev.site/code-of-conduct",3,0,0,3,0,"spec__https___connectci_ddev_site_code_of_conduct.csv","spec__https___connectci_ddev_site_code_of_conduct.html"
+"","https://connectci.ddev.site/user/login",2,0,0,2,0,"spec__https___connectci_ddev_site_user_login.csv","spec__https___connectci_ddev_site_user_login.html"
+"","https://connectci.ddev.site/user/password",3,0,0,3,0,"spec__https___connectci_ddev_site_user_password.csv","spec__https___connectci_ddev_site_user_password.html"
+"","https://connectci.ddev.site/user/register",5,1,1,3,0,"spec__https___connectci_ddev_site_user_register.csv","spec__https___connectci_ddev_site_user_register.html"
+"","https://connectci.ddev.site/user/register/student",2,0,0,2,0,"spec__https___connectci_ddev_site_user_register_student.csv","spec__https___connectci_ddev_site_user_register_student.html"
+"","https://connectci.ddev.site/user/register/rcf",2,0,0,2,0,"spec__https___connectci_ddev_site_user_register_rcf.csv","spec__https___connectci_ddev_site_user_register_rcf.html"
+"","https://connectci.ddev.site/contact/connect_ci",2,0,0,2,0,"spec__https___connectci_ddev_site_contact_connect_ci.csv","spec__https___connectci_ddev_site_contact_connect_ci.html"
