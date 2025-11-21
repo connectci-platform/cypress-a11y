@@ -1,0 +1,1337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://ccmnet.ddev.site/members</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 11/21/2025, 6:08:44 PM</p>
+        <p><strong>Total Violations:</strong> 9</p>
+        <p><strong>Critical:</strong> 1</p>
+        <p><strong>Serious:</strong> 4</p>
+        <p><strong>Moderate:</strong> 4</p>
+        <p><strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation serious">
+        <h3>color-contrast - Elements must meet minimum color contrast ratio thresholds</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI" target="_blank">Elements must meet minimum color contrast ratio thresholds</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2aa, wcag143, TTv5, TT13.c, EN-301-549, EN-9.1.4.3, ACT</p>
+        <h4>Affected Elements (3)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a href="#" class="facets-soft-limit-link"&gt;Show more&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-nect-userskillsmembers > .mb-2.mb-lg-4.facets-widget-checkbox > .facets-soft-limit-link[href="#"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 2.68 (foreground color: #06a9e5, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="https://new.nsf.gov/funding/opportunities/research-coordination-networks-fostering-nurturing/nsf22-558/solicitation"&gt;RCN:CIP solicitation&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .text-left:nth-child(1) > a</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 4.38 (foreground color: #06a9e5, background color: #04376f, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="https://dl.acm.org/doi/pdf/10.1145/3507694"&gt;Transforming Science through Cyberinfrastructure&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .text-left:nth-child(3) > a</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 4.38 (foreground color: #06a9e5, background color: #04376f, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>heading-order - Heading levels should only increase by one</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the order of headings is semantically correct</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI" target="_blank">Heading levels should only increase by one</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;h4 id="pagination-heading" class="visually-hidden"&gt;Pagination&lt;/h4&gt;</div>
+            <p class="target"><strong>Target:</strong> #pagination-heading</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Heading order invalid</div>
+        </div>
+    </div>
+    <div class="violation critical">
+        <h3>image-alt - Images must have alternative text</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure <img> elements have alternative text or a role of none or presentation</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt?application=axeAPI" target="_blank">Images must have alternative text</a></p>
+        <p><strong>Tags:</strong> cat.text-alternatives, wcag2a, wcag111, section508, section508.22.a, TTv5, TT7.a, TT7.b, EN-301-549, EN-9.1.1.1, ACT</p>
+        <h4>Affected Elements (3)</h4>
+
+        <div class="node">
+            <div class="code">&lt;img width="82" height="82" src="/themes/contrib/asp-theme/images/logos/NSF_logo.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .container > div:nth-child(1) > .nsf-logo[href$="nsf.gov/"][rel="noopener"] > img[width="82"][height="82"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/social_auth_google_110097167710118248061.jpg?itok=U9dEMp2D" width="96" height="96" class="img-fluid"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(1) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo > img[width="96"][height="96"][loading="lazy"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img width="82" height="82" src="/themes/nect-theme/img/NSF_logo.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-2 > .nsf-logo[href$="nsf.gov/"][rel="noopener"] > img[width="82"][height="82"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-one-main - Document should have one main landmark</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the document has a main landmark</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI" target="_blank">Document should have one main landmark</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;html lang="en" dir="ltr" class=" js"&gt;</div>
+            <p class="target"><strong>Target:</strong> html</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Document does not have a main landmark</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-unique - Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure landmarks are unique</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=axeAPI" target="_blank">Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;nav class="navbar navbar-expand secondary-nav navbar-light bg-light " id="secondaryNav"&gt;</div>
+            <p class="target"><strong>Target:</strong> #secondaryNav</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>link-in-text-block - Links must be distinguishable without relying on color</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure links are distinguished from surrounding text in a way that does not rely on color</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block?application=axeAPI" target="_blank">Links must be distinguishable without relying on color</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2a, wcag141, TTv5, TT13.a, EN-301-549, EN-9.1.4.1</p>
+        <h4>Affected Elements (2)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a href="https://new.nsf.gov/funding/opportunities/research-coordination-networks-fostering-nurturing/nsf22-558/solicitation"&gt;RCN:CIP solicitation&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .text-left:nth-child(1) > a</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The link has insufficient color contrast of 2.68:1 with the surrounding text. (Minimum contrast is 3:1, link text: #06a9e5, surrounding text: #ffffff)<br>  The link has no styling (such as underline) to distinguish it from the surrounding text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="https://dl.acm.org/doi/pdf/10.1145/3507694"&gt;Transforming Science through Cyberinfrastructure&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .text-left:nth-child(3) > a</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The link has insufficient color contrast of 2.68:1 with the surrounding text. (Minimum contrast is 3:1, link text: #06a9e5, surrounding text: #ffffff)<br>  The link has no styling (such as underline) to distinguish it from the surrounding text</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>link-name - Links must have discernible text</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure links have discernible text</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI" target="_blank">Links must have discernible text</a></p>
+        <p><strong>Tags:</strong> cat.name-role-value, wcag2a, wcag244, wcag412, section508, section508.22.a, TTv5, TT6.a, EN-301-549, EN-9.2.4.4, EN-9.4.1.2, ACT</p>
+        <h4>Affected Elements (3)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a class="nsf-logo" href="https://www.nsf.gov/" target="_blank" rel="noopener"&gt;
+            &lt;img width="82" height="82" src="/themes/contrib/asp-theme/images/logos/NSF_logo.svg"&gt;
+          &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .container > div:nth-child(1) > .nsf-logo[href$="nsf.gov/"][rel="noopener"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element is in tab order and does not have accessible text<br><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/46601"&gt; &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/community-persona/46601"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element is in tab order and does not have accessible text<br><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a class="nsf-logo" href="https://www.nsf.gov/" target="_blank" rel="noopener"&gt;
+              &lt;img width="82" height="82" src="/themes/nect-theme/img/NSF_logo.svg"&gt;
+            &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-2 > .nsf-logo[href$="nsf.gov/"][rel="noopener"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element is in tab order and does not have accessible text<br><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>list - <ul> and <ol> must only directly contain <li>, <script> or <template> elements</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure that lists are structured correctly</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/list?application=axeAPI" target="_blank"><ul> and <ol> must only directly contain <li>, <script> or <template> elements</a></p>
+        <p><strong>Tags:</strong> cat.structure, wcag2a, wcag131, EN-301-549, EN-9.1.3.1</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;ul class="pager__items js-pager__items"&gt;</div>
+            <p class="target"><strong>Target:</strong> .pager__items</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  List element has direct children that are not allowed: [role=presentation]</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (162)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div id="ccmnet-page-title"&gt;</div>
+            <p class="target"><strong>Target:</strong> #ccmnet-page-title</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/FA.jpeg?itok=t9bRli24" width="220" height="220" alt="Feseha Abebe-Akele" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/4085"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          Elizabeth City State University        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-1 text-sm"&gt;
+          &lt;i&gt;Appellatio iustum utinam. Facilisi feugiat iusto iustum plaga praemitto. Abbas huic ibidem pala plaga secundum sudo tego. Abigo eligo iriure modo vero ymo.&lt;/i&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .text-sm</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/password" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;password&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/account" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;account&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/login" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;login&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/profile" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;profile&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/generative-ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;generative-ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(2) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 109 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(114)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/IMG_4152s.jpg?itok=E1v3_tvr" width="220" height="186" alt="Mohsen Ahmadkhani" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/28904"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          South Dakota State University        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-1 text-sm"&gt;
+          &lt;i&gt;Appellatio iustum utinam. Facilisi feugiat iusto iustum plaga praemitto. Abbas huic ibidem pala plaga secundum sudo tego. Abigo eligo iriure modo vero ymo.&lt;/i&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .text-sm</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/deep-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;deep-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/computer-vision" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;computer-vision&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/machine-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;machine-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/neural-networks" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;neural-networks&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 32 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(4) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(37)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(6)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          &lt;img src="/modules/custom/access/modules/cssn/images/profile.gif" height="100" width="90" alt="general profile image"&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/18885"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          New Mexico State University        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-1 text-sm"&gt;
+          &lt;i&gt;Appellatio iustum utinam. Facilisi feugiat iusto iustum plaga praemitto. Abbas huic ibidem pala plaga secundum sudo tego. Abigo eligo iriure modo vero ymo.&lt;/i&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .text-sm</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/deep-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;deep-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/machine-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;machine-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/neural-networks" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;neural-networks&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/supervised-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;supervised-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/unsupervised-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;unsupervised-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 35 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(7) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(40)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/POR_53066.jpg?itok=U2Y-vQvj" width="147" height="220" alt="Dr. Elie Alhajjar" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/15944"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          United States Military Academy        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/pytorch" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;pytorch&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/tensorflow" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;tensorflow&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/biology" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;biology&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/data-science" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;data-science&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/quantum-computing" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;quantum-computing&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 15 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(8) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(20)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(9)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          &lt;img src="/modules/custom/access/modules/cssn/images/profile.gif" height="100" width="90" alt="general profile image"&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/1099"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          Texas A&amp;amp;M University-San Antonio        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/llm" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;llm&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/generative-ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;generative-ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/deep-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;deep-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/machine-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;machine-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 5 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(10) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(10)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/anas_alsobeh.jpg?itok=oxc_ObwR" width="147" height="220" alt="Dr.Anas Alsobeh" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/45040"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          Southern Illinois University, Carbondale        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-1 text-sm"&gt;
+          &lt;i&gt;Appellatio iustum utinam. Facilisi feugiat iusto iustum plaga praemitto. Abbas huic ibidem pala plaga secundum sudo tego. Abigo eligo iriure modo vero ymo.&lt;/i&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .text-sm</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/cognitive-bias" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;cognitive-bias&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/generative-ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;generative-ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/llm" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;llm&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/machine-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;machine-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 87 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(11) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(92)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/Headshot%20small.jpg?itok=vgV1vuqZ" width="194" height="220" alt="Headshot" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/16984"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          California State University-San Bernardino        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-1 text-sm"&gt;
+          &lt;i&gt;Appellatio iustum utinam. Facilisi feugiat iusto iustum plaga praemitto. Abbas huic ibidem pala plaga secundum sudo tego. Abigo eligo iriure modo vero ymo.&lt;/i&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .text-sm</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/deep-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;deep-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/generative-ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;generative-ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/llm" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;llm&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/machine-learning" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;machine-learning&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 40 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(12) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(45)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/amit-amritkar.jpg?itok=KaJ6W7CT" width="220" height="220" alt="Amit" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/3902"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          Pennsylvania State University        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/management" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;management&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/research-facilitation" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;research-facilitation&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/training" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;training&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/professional-development" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;professional-development&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/fortran" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;fortran&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 67 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(13) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(72)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(14)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(15)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(16)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(17)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/tore8arch.png?itok=Jr-fWt1q" width="172" height="220" alt="tore8arch.png" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/3501"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          Arizona State University        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-1 text-sm"&gt;
+          &lt;i&gt;Appellatio iustum utinam. Facilisi feugiat iusto iustum plaga praemitto. Abbas huic ibidem pala plaga secundum sudo tego. Abigo eligo iriure modo vero ymo.&lt;/i&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .text-sm</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/dft" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;dft&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/quantum-computing" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;quantum-computing&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/quantum-mechanics" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;quantum-mechanics&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/computational-chemistry" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;computational-chemistry&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/materials-science" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;materials-science&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 11 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(18) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(16)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/devin.jpg?itok=rCpHEE8l" width="170" height="220" alt="User" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/2949"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          University of Arizona        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-1 text-sm"&gt;
+          &lt;i&gt;Appellatio iustum utinam. Facilisi feugiat iusto iustum plaga praemitto. Abbas huic ibidem pala plaga secundum sudo tego. Abigo eligo iriure modo vero ymo.&lt;/i&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .text-sm</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/computer-vision" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;computer-vision&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/generative-ai" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;generative-ai&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/gis" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;gis&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/visualization" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;visualization&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/plotting" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;plotting&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 36 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(19) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(41)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(20)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          &lt;img src="/modules/custom/access/modules/cssn/images/profile.gif" height="100" width="90" alt="general profile image"&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/902"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          Arizona State University        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/documentation" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;documentation&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/tickets" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;tickets&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/reporting" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;reporting&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/proposal-request" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;proposal-request&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/errors" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;errors&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 98 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(21) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(103)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          &lt;img src="/modules/custom/access/modules/cssn/images/profile.gif" height="100" width="90" alt="general profile image"&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/30516"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          Texas Tech University        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/documentation" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;documentation&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/tickets" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;tickets&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/vectorization" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;vectorization&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/dft" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;dft&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/linear-programming" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;linear-programming&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 77 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(22) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(82)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="cssn-photo"&gt;
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+&lt;img loading="lazy" src="/sites/default/files/styles/medium/public/pictures/dsf.jpg?itok=dhZNDPcE" width="176" height="220" alt="Data Science Fellows photo" class="img-fluid"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .cssn-photo</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="my-1.5 leading-5"&gt;
+          &lt;a class="stretched-link text-dark-teal hover--text-orange no-underline text-xl font-bold text-purple hover--ccmnet-blue" href="/community-persona/45858"&gt;Lux Rivers&lt;/a&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .my-1\.5.leading-5</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="m-0 font-semibold leading-5 text-lg"&gt;
+          University of Arizona        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .m-0.font-semibold.text-lg</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-1 text-sm"&gt;
+          &lt;i&gt;Appellatio iustum utinam. Facilisi feugiat iusto iustum plaga praemitto. Abbas huic ibidem pala plaga secundum sudo tego. Abigo eligo iriure modo vero ymo.&lt;/i&gt;
+        &lt;/div&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .text-sm</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/big-data" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;big-data&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/computer-graphics" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;computer-graphics&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/data-analysis" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;data-analysis&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/visualization" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;visualization&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(4)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li&gt;&lt;a href="/tags/github" class="text-truncate text-xs no-underline font-normal mb-1 me-1 mr-1 px-2 py-1 hover--border-dark-teal border hover--text-dark-teal"&gt;github&lt;/a&gt;&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(5)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;li style="display: flex; align-items: center; font-size: 14px;"&gt;+ 26 more&lt;/li&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(23) > .nect-cc-people.card.h-100 > .p-2 > .cssn-directory-item > .square-tags.ontop-links.\[\&_ul\]--list-none > ul > li:nth-child(31)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="col-11 col-sm-6 col-md-4 mb-4 mx-auto border-4 border-solid border-dark-teal hover--border-orange w-full relative"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-11.col-sm-6.col-md-4:nth-child(24)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="js-form-item form-item js-form-type-select form-item-items-per-page js-form-item-items-per-page form-group"&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-nect-exposedformccmnet-memberspage-1-2 > form[action="/members"] > .js-form-type-select.form-item-items-per-page.js-form-item-items-per-page</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="js-form-item form-item js-form-type-textfield form-item-search-api-fulltext js-form-item-search-api-fulltext form-group"&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-nect-exposedformccmnet-memberspage-1 > form[action="/members"] > .js-form-type-textfield.form-item-search-api-fulltext.js-form-item-search-api-fulltext</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;h2&gt;Skills&lt;/h2&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-nect-userskillsmembers > h2</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-bash"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(3) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-bash"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(3) > label[for="user-skills-members-bash"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-python"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(4) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-python"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(4) > label[for="user-skills-members-python"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-git"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(5) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-git"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(5) > label[for="user-skills-members-git"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-training"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(6) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-training"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(6) > label[for="user-skills-members-training"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-slurm"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(7) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-slurm"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(7) > label[for="user-skills-members-slurm"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-ssh"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(8) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-ssh"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(8) > label[for="user-skills-members-ssh"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-professional-development"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(9) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-professional-development"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(9) > label</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-research-facilitation"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(10) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-research-facilitation"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(10) > label</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-scripting"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(11) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-scripting"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(11) > label[for="user-skills-members-scripting"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input type="checkbox" class="facets-checkbox" id="user-skills-members-vim"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(12) > .facets-checkbox[type="checkbox"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;label for="user-skills-members-vim"&gt;</div>
+            <p class="target"><strong>Target:</strong> ul[data-drupal-facet-id="user_skills_members-0"] > .facet-item.list-none:nth-child(12) > label[for="user-skills-members-vim"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#" class="facets-soft-limit-link"&gt;Show more&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-nect-userskillsmembers > .mb-2.mb-lg-4.facets-widget-checkbox > .facets-soft-limit-link[href="#"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div id="block-nect-facetshiddenbehindlogin"&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-nect-facetshiddenbehindlogin</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>
