@@ -1,0 +1,13 @@
+spec,url,violations,critical,serious,moderate,minor,csv,html
+"","https://ccmnet.ddev.site/",8,1,3,4,0,"spec__https___ccmnet_ddev_site_.csv","spec__https___ccmnet_ddev_site_.html"
+"","https://ccmnet.ddev.site/mentorships",7,1,3,3,0,"spec__https___ccmnet_ddev_site_mentorships.csv","spec__https___ccmnet_ddev_site_mentorships.html"
+"","https://ccmnet.ddev.site/members",9,1,4,4,0,"spec__https___ccmnet_ddev_site_members.csv","spec__https___ccmnet_ddev_site_members.html"
+"","https://ccmnet.ddev.site/about-ccmnet",8,1,3,4,0,"spec__https___ccmnet_ddev_site_about_ccmnet.csv","spec__https___ccmnet_ddev_site_about_ccmnet.html"
+"","https://ccmnet.ddev.site/annual-meeting",8,1,3,4,0,"spec__https___ccmnet_ddev_site_annual_meeting.csv","spec__https___ccmnet_ddev_site_annual_meeting.html"
+"","https://ccmnet.ddev.site/user/register",7,1,3,3,0,"spec__https___ccmnet_ddev_site_user_register.csv","spec__https___ccmnet_ddev_site_user_register.html"
+"","https://ccmnet.ddev.site/user/login",7,1,3,3,0,"spec__https___ccmnet_ddev_site_user_login.csv","spec__https___ccmnet_ddev_site_user_login.html"
+"","https://ccmnet.ddev.site/affinity-groups/ccmnet-mentoring",8,1,3,4,0,"spec__https___ccmnet_ddev_site_affinity_groups_ccmnet_mentoring.csv","spec__https___ccmnet_ddev_site_affinity_groups_ccmnet_mentoring.html"
+"","https://ccmnet.ddev.site/affinity-groups",7,1,3,3,0,"spec__https___ccmnet_ddev_site_affinity_groups.csv","spec__https___ccmnet_ddev_site_affinity_groups.html"
+"","https://ccmnet.ddev.site/knowledge-base/resources/mentorship",7,1,3,3,0,"spec__https___ccmnet_ddev_site_knowledge_base_resources_mentorship.csv","spec__https___ccmnet_ddev_site_knowledge_base_resources_mentorship.html"
+"","https://ccmnet.ddev.site/knowledge-base/resources",9,1,4,4,0,"spec__https___ccmnet_ddev_site_knowledge_base_resources.csv","spec__https___ccmnet_ddev_site_knowledge_base_resources.html"
+"","https://ccmnet.ddev.site/tags",7,1,3,3,0,"spec__https___ccmnet_ddev_site_tags.csv","spec__https___ccmnet_ddev_site_tags.html"
