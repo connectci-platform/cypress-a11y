@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://ccmnet.ddev.site/user/login</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 11/21/2025, 4:50:56 PM</p>
+        <p><strong>Total Violations:</strong> 7</p>
+        <p><strong>Critical:</strong> 1</p>
+        <p><strong>Serious:</strong> 3</p>
+        <p><strong>Moderate:</strong> 3</p>
+        <p><strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation serious">
+        <h3>color-contrast - Elements must meet minimum color contrast ratio thresholds</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI" target="_blank">Elements must meet minimum color contrast ratio thresholds</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2aa, wcag143, TTv5, TT13.c, EN-301-549, EN-9.1.4.3, ACT</p>
+        <h4>Affected Elements (8)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a class="ccmnet" href="/user/register/ccmnet/"&gt;create a new account&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="ccmnet/"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 2.68 (foreground color: #06a9e5, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="/google-signin"&gt;phasing out Google login.&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .ccmnet > a[href$="google-signin"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 2.68 (foreground color: #06a9e5, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input class="btn btn-success m-1 button js-form-submit form-submit btn btn-primary" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in"&gt;</div>
+            <p class="target"><strong>Target:</strong> .btn-success</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 2.68 (foreground color: #ffffff, background color: #06a9e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="/login?redirect=" class="button btn btn-primary"&gt;Login with Access CI&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/login?redirect="]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 2.68 (foreground color: #ffffff, background color: #06a9e5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="https://identity.access-ci.org/"&gt;Having trouble logging in?&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> #cilogon-auth-login-suffix > a:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 2.68 (foreground color: #06a9e5, background color: #ffffff, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="https://identity.access-ci.org/new-user"&gt;Create an account&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> #cilogon-auth-login-suffix > a:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 2.68 (foreground color: #06a9e5, background color: #ffffff, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="https://new.nsf.gov/funding/opportunities/research-coordination-networks-fostering-nurturing/nsf22-558/solicitation"&gt;RCN:CIP solicitation&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .text-left:nth-child(1) > a</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 4.38 (foreground color: #06a9e5, background color: #04376f, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="https://dl.acm.org/doi/pdf/10.1145/3507694"&gt;Transforming Science through Cyberinfrastructure&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .text-left:nth-child(3) > a</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 4.38 (foreground color: #06a9e5, background color: #04376f, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+    </div>
+    <div class="violation critical">
+        <h3>image-alt - Images must have alternative text</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure <img> elements have alternative text or a role of none or presentation</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt?application=axeAPI" target="_blank">Images must have alternative text</a></p>
+        <p><strong>Tags:</strong> cat.text-alternatives, wcag2a, wcag111, section508, section508.22.a, TTv5, TT7.a, TT7.b, EN-301-549, EN-9.1.1.1, ACT</p>
+        <h4>Affected Elements (2)</h4>
+
+        <div class="node">
+            <div class="code">&lt;img width="82" height="82" src="/themes/contrib/asp-theme/images/logos/NSF_logo.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .container > div:nth-child(1) > .nsf-logo[href$="nsf.gov/"][rel="noopener"] > img[width="82"][height="82"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img width="82" height="82" src="/themes/nect-theme/img/NSF_logo.svg"&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-2 > .nsf-logo[href$="nsf.gov/"][rel="noopener"] > img[width="82"][height="82"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an alt attribute<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-one-main - Document should have one main landmark</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure the document has a main landmark</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI" target="_blank">Document should have one main landmark</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;html lang="en" dir="ltr" class=" js"&gt;</div>
+            <p class="target"><strong>Target:</strong> html</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Document does not have a main landmark</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>landmark-unique - Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure landmarks are unique</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=axeAPI" target="_blank">Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;nav class="navbar navbar-expand secondary-nav navbar-light bg-light " id="secondaryNav"&gt;</div>
+            <p class="target"><strong>Target:</strong> #secondaryNav</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>link-in-text-block - Links must be distinguishable without relying on color</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure links are distinguished from surrounding text in a way that does not rely on color</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block?application=axeAPI" target="_blank">Links must be distinguishable without relying on color</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2a, wcag141, TTv5, TT13.a, EN-301-549, EN-9.1.4.1</p>
+        <h4>Affected Elements (2)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a href="https://new.nsf.gov/funding/opportunities/research-coordination-networks-fostering-nurturing/nsf22-558/solicitation"&gt;RCN:CIP solicitation&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .text-left:nth-child(1) > a</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The link has insufficient color contrast of 2.68:1 with the surrounding text. (Minimum contrast is 3:1, link text: #06a9e5, surrounding text: #ffffff)<br>  The link has no styling (such as underline) to distinguish it from the surrounding text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="https://dl.acm.org/doi/pdf/10.1145/3507694"&gt;Transforming Science through Cyberinfrastructure&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .text-left:nth-child(3) > a</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The link has insufficient color contrast of 2.68:1 with the surrounding text. (Minimum contrast is 3:1, link text: #06a9e5, surrounding text: #ffffff)<br>  The link has no styling (such as underline) to distinguish it from the surrounding text</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>link-name - Links must have discernible text</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure links have discernible text</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI" target="_blank">Links must have discernible text</a></p>
+        <p><strong>Tags:</strong> cat.name-role-value, wcag2a, wcag244, wcag412, section508, section508.22.a, TTv5, TT6.a, EN-301-549, EN-9.2.4.4, EN-9.4.1.2, ACT</p>
+        <h4>Affected Elements (2)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a class="nsf-logo" href="https://www.nsf.gov/" target="_blank" rel="noopener"&gt;
+            &lt;img width="82" height="82" src="/themes/contrib/asp-theme/images/logos/NSF_logo.svg"&gt;
+          &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .container > div:nth-child(1) > .nsf-logo[href$="nsf.gov/"][rel="noopener"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element is in tab order and does not have accessible text<br><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a class="nsf-logo" href="https://www.nsf.gov/" target="_blank" rel="noopener"&gt;
+              &lt;img width="82" height="82" src="/themes/nect-theme/img/NSF_logo.svg"&gt;
+            &lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .col-2 > .nsf-logo[href$="nsf.gov/"][rel="noopener"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element is in tab order and does not have accessible text<br><br>Fix any of the following:<br>  Element does not have text that is visible to screen readers<br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (8)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div id="ccmnet-page-title"&gt;</div>
+            <p class="target"><strong>Target:</strong> #ccmnet-page-title</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;p&gt;</div>
+            <p class="target"><strong>Target:</strong> .card-body > p:nth-child(1)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;p class="ccmnet"&gt;Learn how we’re &lt;a href="/google-signin"&gt;phasing out Google login.&lt;/a&gt;&lt;/p&gt;</div>
+            <p class="target"><strong>Target:</strong> .card-body > .ccmnet</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="mb-2"&gt;</div>
+            <p class="target"><strong>Target:</strong> .mb-2</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="control-group form-group"&gt;</div>
+            <p class="target"><strong>Target:</strong> .control-group.form-group:nth-child(2)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div class="control-group form-group"&gt;</div>
+            <p class="target"><strong>Target:</strong> .control-group.form-group:nth-child(3)</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a class="btn btn-secondary m-1" href="/user/password"&gt;Forgot Password&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .btn-secondary</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;div id="block-nect-accessciuserlogin"&gt;</div>
+            <p class="target"><strong>Target:</strong> #block-nect-accessciuserlogin</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>
