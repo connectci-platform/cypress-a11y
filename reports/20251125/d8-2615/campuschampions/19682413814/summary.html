@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; position: sticky; top: 0; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
+        .critical { color: #d9534f; font-weight: bold; }
+        .serious { color: #f0ad4e; font-weight: bold; }
+        .moderate { color: #5bc0de; }
+        .minor { color: #5cb85c; }
+        .no-violations { color: #5cb85c; font-weight: bold; }
+        .filter-container { margin-bottom: 15px; }
+        .search { padding: 8px; width: 300px; margin-right: 10px; }
+        .sort-btn { padding: 8px; background: #f2f2f2; border: 1px solid #ddd; cursor: pointer; }
+        .sort-btn:hover { background: #e2e2e2; }
+        .timestamp { font-size: 0.85em; color: #777; }
+        .sticky-header { position: sticky; top: 0; background: white; padding: 10px 0; z-index: 1000; }
+        .auto-refresh { display: flex; align-items: center; margin-left: 20px; }
+    </style>
+</head>
+<body>
+    <div class="sticky-header">
+        <h1>Accessibility Test Summary</h1>
+        <div class="filter-container">
+            <input type="text" id="searchInput" class="search" placeholder="Search specs, URLs, issues...">
+            <button class="sort-btn" onclick="sortTable('violations', 'desc')">Most Violations</button>
+            <button class="sort-btn" onclick="sortTable('timestamp', 'desc')">Most Recent</button>
+            <button class="sort-btn" onclick="sortTable('specName', 'asc')">By Spec Name</button>
+            <label class="auto-refresh">
+                <input type="checkbox" id="autoRefresh"> Auto-refresh (30s)
+            </label>
+        </div>
+    </div>
+
+    <div class="summary">
+        <h2>Overview</h2>
+        <p><strong>Total Tests:</strong> 27</p>
+        <p><strong>Total Violations:</strong> 17</p>
+        <p><strong>Critical:</strong> <span class="critical">0</span></p>
+        <p><strong>Serious:</strong> <span class="serious">4</span></p>
+        <p><strong>Moderate:</strong> <span class="moderate">13</span></p>
+        <p><strong>Minor:</strong> <span class="minor">0</span></p>
+        <p><strong>Last Generated:</strong> 11/25/2025, 8:14:24 PM</p>
+    </div>
+
+    <h2>Test Reports</h2>
+    <table id="reportTable">
+        <thead>
+            <tr>
+                <th>Spec Name</th>
+                <th>Page URL</th>
+                <th>Violations</th>
+                <th>Critical</th>
+                <th>Serious</th>
+                <th>Moderate</th>
+                <th>Minor</th>
+                <th>Reports</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/knowledge-base/resources" data-violations="2" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/knowledge-base/resources" target="_blank">https://campuschampions.ddev.site/knowledge-base/resources</a></td>
+                <td class="critical">2</td>
+                <td class="">0</td>
+                <td class="serious">1</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_knowledge_base_resources.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_knowledge_base_resources.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/form/request-tag" data-violations="2" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/form/request-tag" target="_blank">https://campuschampions.ddev.site/form/request-tag</a></td>
+                <td class="critical">2</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">2</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_form_request_tag.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_form_request_tag.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/tags/nlp" data-violations="2" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/tags/nlp" target="_blank">https://campuschampions.ddev.site/tags/nlp</a></td>
+                <td class="critical">2</td>
+                <td class="">0</td>
+                <td class="serious">1</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_tags_nlp.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_tags_nlp.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/current-champions" data-violations="1" data-timestamp="2025-11-25T20:14:24.867Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/current-champions" target="_blank">https://campuschampions.ddev.site/current-champions</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="serious">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_current_champions.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_current_champions.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/champions/current-campus-champions" data-violations="1" data-timestamp="2025-11-25T20:14:24.867Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/champions/current-campus-champions" target="_blank">https://campuschampions.ddev.site/champions/current-campus-champions</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_champions_current_campus_champions.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_champions_current_campus_champions.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/about" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/about" target="_blank">https://campuschampions.ddev.site/about</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_about.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_about.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/about-us/affinity-groups-faq" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/about-us/affinity-groups-faq" target="_blank">https://campuschampions.ddev.site/about-us/affinity-groups-faq</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_about_us_affinity_groups_faq.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_about_us_affinity_groups_faq.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/people?facets_query=&f%5B0%5D=program%3A572" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/people?facets_query=&f%5B0%5D=program%3A572" target="_blank">https://campuschampions.ddev.site/people?facets_query=&f%5B0%5D=program%3A572</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="serious">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_people_facets_query__f_5B0_5D_program_3A572.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_people_facets_query__f_5B0_5D_program_3A572.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/announcements/announcing-campus-champions-cc-ai-mentorship-program" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/announcements/announcing-campus-champions-cc-ai-mentorship-program" target="_blank">https://campuschampions.ddev.site/announcements/announcing-campus-champions-cc-ai-mentorship-program</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_announcements_announcing_campus_champions_cc_ai_mentorship_program.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_announcements_announcing_campus_champions_cc_ai_mentorship_program.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/community/become-member-cssn-community" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/community/become-member-cssn-community" target="_blank">https://campuschampions.ddev.site/community/become-member-cssn-community</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_community_become_member_cssn_community.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_community_become_member_cssn_community.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/nsf-access-resources" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/nsf-access-resources" target="_blank">https://campuschampions.ddev.site/nsf-access-resources</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_nsf_access_resources.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_nsf_access_resources.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/tags" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/tags" target="_blank">https://campuschampions.ddev.site/tags</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_tags.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_tags.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/events" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/events" target="_blank">https://campuschampions.ddev.site/events</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_events.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_events.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/user/201/edit" data-violations="1" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/user/201/edit" target="_blank">https://campuschampions.ddev.site/user/201/edit</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_user_201_edit.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_user_201_edit.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/" data-violations="0" data-timestamp="2025-11-25T20:14:24.867Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/" target="_blank">https://campuschampions.ddev.site/</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/campus-champions-ai-mentorship-program" data-violations="0" data-timestamp="2025-11-25T20:14:24.867Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/campus-champions-ai-mentorship-program" target="_blank">https://campuschampions.ddev.site/campus-champions-ai-mentorship-program</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_campus_champions_ai_mentorship_program.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_campus_champions_ai_mentorship_program.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/news" data-violations="0" data-timestamp="2025-11-25T20:14:24.867Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/news" target="_blank">https://campuschampions.ddev.site/news</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_news.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_news.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/form/join-campus-champions" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/form/join-campus-champions" target="_blank">https://campuschampions.ddev.site/form/join-campus-champions</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_form_join_campus_champions.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_form_join_campus_champions.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/about-us/governance" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/about-us/governance" target="_blank">https://campuschampions.ddev.site/about-us/governance</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_about_us_governance.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_about_us_governance.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/code-of-conduct" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/code-of-conduct" target="_blank">https://campuschampions.ddev.site/code-of-conduct</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_code_of_conduct.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_code_of_conduct.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/connectci-code-of-conduct" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/connectci-code-of-conduct" target="_blank">https://campuschampions.ddev.site/connectci-code-of-conduct</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_connectci_code_of_conduct.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_connectci_code_of_conduct.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/announcements" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/announcements" target="_blank">https://campuschampions.ddev.site/announcements</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_announcements.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_announcements.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/affinity-groups" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/affinity-groups" target="_blank">https://campuschampions.ddev.site/affinity-groups</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_affinity_groups.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_affinity_groups.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/mentorships/cc-ai-ci-leadership-facilitating-grad-student-goals-utoledo" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/mentorships/cc-ai-ci-leadership-facilitating-grad-student-goals-utoledo" target="_blank">https://campuschampions.ddev.site/mentorships/cc-ai-ci-leadership-facilitating-grad-student-goals-utoledo</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_mentorships_cc_ai_ci_leadership_facilitating_grad_student_goals_utoledo.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_mentorships_cc_ai_ci_leadership_facilitating_grad_student_goals_utoledo.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/user/login" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/user/login" target="_blank">https://campuschampions.ddev.site/user/login</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_user_login.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_user_login.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/user/password" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/user/password" target="_blank">https://campuschampions.ddev.site/user/password</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_user_password.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_user_password.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://campuschampions.ddev.site/connectci-privacy-policy" data-violations="0" data-timestamp="2025-11-25T20:14:24.868Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://campuschampions.ddev.site/connectci-privacy-policy" target="_blank">https://campuschampions.ddev.site/connectci-privacy-policy</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___campuschampions_ddev_site_connectci_privacy_policy.html">HTML</a> |
+                    <a href="./spec__https___campuschampions_ddev_site_connectci_privacy_policy.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <script>
+        function sortTable(column, direction) {
+            const table = document.getElementById('reportTable');
+            const rows = Array.from(table.querySelectorAll('tbody tr'));
+            const sortedRows = rows.sort((a, b) => {
+                let aValue, bValue;
+
+                if (column === 'specName') {
+                    aValue = a.cells[0].textContent;
+                    bValue = b.cells[0].textContent;
+                    return direction === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+                } else if (column === 'violations') {
+                    aValue = parseInt(a.getAttribute('data-violations'), 10);
+                    bValue = parseInt(b.getAttribute('data-violations'), 10);
+                } else if (column === 'timestamp') {
+                    aValue = new Date(a.getAttribute('data-timestamp')).getTime();
+                    bValue = new Date(b.getAttribute('data-timestamp')).getTime();
+                }
+
+                if (direction === 'asc') {
+                    return aValue - bValue;
+                } else {
+                    return bValue - aValue;
+                }
+            });
+
+            // Remove existing rows
+            rows.forEach(row => row.remove());
+
+            // Add sorted rows
+            sortedRows.forEach(row => {
+                table.querySelector('tbody').appendChild(row);
+            });
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#reportTable tbody tr');
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                const spec = row.getAttribute('data-spec').toLowerCase();
+                const url = row.getAttribute('data-url').toLowerCase();
+
+                if (text.includes(searchTerm) || spec.includes(searchTerm) || url.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Auto-refresh functionality
+        document.getElementById('autoRefresh').addEventListener('change', function() {
+            if (this.checked) {
+                window.refreshTimer = setInterval(() => {
+                    location.reload();
+                }, 30000); // 30 seconds
+            } else if (window.refreshTimer) {
+                clearInterval(window.refreshTimer);
+            }
+        });
+    </script>
+</body>
+</html>
+            
