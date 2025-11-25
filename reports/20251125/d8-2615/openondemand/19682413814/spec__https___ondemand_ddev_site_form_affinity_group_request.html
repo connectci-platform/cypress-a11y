@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://ondemand.ddev.site/form/affinity-group-request</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 11/25/2025, 8:34:08 PM</p>
+        <p><strong>Total Violations:</strong> 3</p>
+        <p><strong>Critical:</strong> 1</p>
+        <p><strong>Serious:</strong> 1</p>
+        <p><strong>Moderate:</strong> 1</p>
+        <p><strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation critical">
+        <h3>label - Form elements must have labels</h3>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure every form element has a label</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI" target="_blank">Form elements must have labels</a></p>
+        <p><strong>Tags:</strong> cat.forms, wcag2a, wcag412, section508, section508.22.n, TTv5, TT5.c, EN-301-549, EN-9.4.1.2, ACT</p>
+        <h4>Affected Elements (2)</h4>
+
+        <div class="node">
+            <div class="code">&lt;input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"&gt;</div>
+            <p class="target"><strong>Target:</strong> span[data-select2-id="1"] > .selection > .select2-selection.select2-selection--multiple[role="combobox"] > .select2-selection__rendered > .select2-search.select2-search--inline > .select2-search__field[type="search"][autocorrect="off"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an implicit (wrapped) <label><br>  Element does not have an explicit <label><br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element has an empty placeholder attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"&gt;</div>
+            <p class="target"><strong>Target:</strong> span[data-select2-id="2"] > .selection > .select2-selection.select2-selection--multiple[role="combobox"] > .select2-selection__rendered > .select2-search.select2-search--inline > .select2-search__field[type="search"][autocorrect="off"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an implicit (wrapped) <label><br>  Element does not have an explicit <label><br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element has an empty placeholder attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation serious">
+        <h3>link-in-text-block - Links must be distinguishable without relying on color</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure links are distinguished from surrounding text in a way that does not rely on color</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block?application=axeAPI" target="_blank">Links must be distinguishable without relying on color</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2a, wcag141, TTv5, TT13.a, EN-301-549, EN-9.1.4.1</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a href="mailto:example@email.com"&gt;mailto:example@email.com)&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="mailto:example@email.com"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The link has insufficient color contrast of 2.76:1 with the surrounding text. (Minimum contrast is 3:1, link text: #ca1236, surrounding text: #222222)<br>  The link has no styling (such as underline) to distinguish it from the surrounding text</div>
+        </div>
+    </div>
+    <div class="violation moderate">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;div id="toolbar-administration" role="group" aria-label="Site administration toolbar" data-drupal-claro-processed-toolbar="" class="toolbar claro-toolbar toolbar-oriented" data-once="toolbar toolbarAntiFlicker"&gt;</div>
+            <p class="target"><strong>Target:</strong> #toolbar-administration</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>
