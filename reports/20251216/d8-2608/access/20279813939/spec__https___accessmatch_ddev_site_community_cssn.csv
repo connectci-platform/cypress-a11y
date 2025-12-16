@@ -1,0 +1,2 @@
+impact,id,description,help,helpUrl,tags,html,target,failureSummary
+moderate,landmark-unique,"Ensure landmarks are unique","Landmarks should have a unique role or role/label/title (i.e. accessible name) combination","https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=axeAPI","cat.semantics;best-practice","<nav class=\"hidden md--block bg-md-teal p-5 ms-auto h-fit\">",".ms-auto","Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
