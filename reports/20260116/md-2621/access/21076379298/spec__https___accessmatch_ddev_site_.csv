@@ -1,0 +1,2 @@
+impact,id,description,help,helpUrl,tags,html,target,failureSummary
+moderate,page-has-heading-one,"Ensure that the page, or at least one of its frames contains a level-one heading","Page should contain a level-one heading","https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI","cat.semantics;best-practice","<html lang=\"en\" dir=\"ltr\" class=\"overflow-x-clip js\">","html","Fix all of the following:\n  Page must have a level-one heading"
