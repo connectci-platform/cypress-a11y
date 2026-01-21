@@ -1,0 +1,2 @@
+impact,id,description,help,helpUrl,tags,html,target,failureSummary
+serious,list,"Ensure that lists are structured correctly","<ul> and <ol> must only directly contain <li>, <script> or <template> elements","https://dequeuniversity.com/rules/axe/4.10/list?application=axeAPI","cat.structure;wcag2a;wcag131;EN-301-549;EN-9.1.3.1","<ul class=\"pager__items js-pager__items\">",".pager__items","Fix all of the following:\n  List element has direct children that are not allowed: [role=presentation]"
