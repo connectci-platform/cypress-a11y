@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://ccmnet.ddev.site/about-ccmnet</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 1/23/2026, 7:01:33 PM</p>
+        <p><strong>Total Violations:</strong> 1</p>
+        <p><strong>Critical:</strong> 0</p>
+        <p><strong>Serious:</strong> 1</p>
+        <p><strong>Moderate:</strong> 0</p>
+        <p><strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation serious">
+        <h3>color-contrast - Elements must meet minimum color contrast ratio thresholds</h3>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI" target="_blank">Elements must meet minimum color contrast ratio thresholds</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2aa, wcag143, TTv5, TT13.c, EN-301-549, EN-9.1.4.3, ACT</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a class="btn-primary" href="/guide"&gt;Read&nbsp;the&nbsp;Guide&nbsp;&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> .btn-primary[href$="guide"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #ffffff, background color: #0489ba, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+    </div>
+</body>
+</html>
