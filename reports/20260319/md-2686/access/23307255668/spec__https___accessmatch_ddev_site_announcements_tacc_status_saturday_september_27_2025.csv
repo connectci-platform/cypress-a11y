@@ -1,0 +1,2 @@
+category,impact,id,description,help,helpUrl,tags,html,target,failureSummary
+warning,moderate,heading-order,"Ensure the order of headings is semantically correct","Heading levels should only increase by one","https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI","cat.semantics;best-practice","<h3 class=\"field__label\">Affinity Group</h3>",".h1.block-inline-blockbasic.page-title:nth-child(2) > .clearfix.text-formatted.field--name-body > .field__label","Fix any of the following:\n  Heading order invalid"
