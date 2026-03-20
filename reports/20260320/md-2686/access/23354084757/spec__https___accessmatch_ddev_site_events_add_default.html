@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .category { font-weight: bold; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-bottom: 5px; }
+        .category-error { background-color: #f8d7da; color: #721c24; }
+        .category-warning { background-color: #fff3cd; color: #856404; }
+        .violation.category-warning { border-right: 5px solid #ffc107; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://accessmatch.ddev.site/events/add/default</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 3/20/2026, 5:21:36 PM</p>
+        <p><strong>Total Violations:</strong> 2</p>
+        <h3>Errors (WCAG 2.1 AA - Compliance Required)</h3>
+        <p><strong>Critical:</strong> 1 | <strong>Serious:</strong> 0 | <strong>Moderate:</strong> 0 | <strong>Minor:</strong> 0</p>
+        <h3>Warnings (WCAG 2.2 / Best Practices)</h3>
+        <p><strong>Critical:</strong> 0 | <strong>Serious:</strong> 0 | <strong>Moderate:</strong> 1 | <strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation critical category-error">
+        <h3>label - Form elements must have labels</h3>
+        <p class="category category-error">Error (WCAG 2.1 AA)</p>
+        <p class="impact critical">Impact: critical</p>
+        <p><strong>Description:</strong> Ensure every form element has a label</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI" target="_blank">Form elements must have labels</a></p>
+        <p><strong>Tags:</strong> cat.forms, wcag2a, wcag412, section508, section508.22.n, TTv5, TT5.c, EN-301-549, EN-9.4.1.2, ACT</p>
+        <h4>Affected Elements (4)</h4>
+
+        <div class="node">
+            <div class="code">&lt;input data-drupal-selector="edit-custom-date-0-value-date" type="date" id="edit-custom-date-0-value-date" name="custom_date[0][value][date]" value="" size="12" class="form-date"&gt;</div>
+            <p class="target"><strong>Target:</strong> #edit-custom-date-0-value-date</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an implicit (wrapped) <label><br>  Element does not have an explicit <label><br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element has no placeholder attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input data-drupal-selector="edit-custom-date-0-end-value-date" type="date" id="edit-custom-date-0-end-value-date" name="custom_date[0][end_value][date]" value="" size="12" class="form-date"&gt;</div>
+            <p class="target"><strong>Target:</strong> #edit-custom-date-0-end-value-date</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an implicit (wrapped) <label><br>  Element does not have an explicit <label><br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element has no placeholder attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input data-drupal-selector="edit-field-affinity-group-node-0-target-id" class="form-autocomplete form-text ui-autocomplete-input" data-autocomplete-path="/entity_reference_autocomplete/node/default%3Anode/yS-AsQE-GGPNWLPCXXjoCO8SGPIjGIj-eNdiygARZIY" type="text" id="edit-field-affinity-group-node-0-target-id" name="field_affinity_group_node[0][target_id]" value="" size="60" maxlength="1024" placeholder="" data-once="autocomplete" autocomplete="off"&gt;</div>
+            <p class="target"><strong>Target:</strong> #edit-field-affinity-group-node-0-target-id</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an implicit (wrapped) <label><br>  Element does not have an explicit <label><br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element has an empty placeholder attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;input data-drupal-selector="edit-field-other-authors-0-target-id" class="form-autocomplete form-text ui-autocomplete-input" data-autocomplete-path="/entity_reference_autocomplete/user/default%3Auser/wuNfqdzy2SZ-7koh4y5WnTHjBZBED-lqfeR36pL-EBs" type="text" id="edit-field-other-authors-0-target-id" name="field_other_authors[0][target_id]" value="" size="60" maxlength="1024" placeholder="" data-once="autocomplete" autocomplete="off"&gt;</div>
+            <p class="target"><strong>Target:</strong> #edit-field-other-authors-0-target-id</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element does not have an implicit (wrapped) <label><br>  Element does not have an explicit <label><br>  aria-label attribute does not exist or is empty<br>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty<br>  Element has no title attribute<br>  Element has an empty placeholder attribute<br>  Element's default semantics were not overridden with role="none" or role="presentation"</div>
+        </div>
+    </div>
+    <div class="violation moderate category-warning">
+        <h3>landmark-unique - Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</h3>
+        <p class="category category-warning">Warning (WCAG 2.2/Best Practice)</p>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure landmarks are unique</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=axeAPI" target="_blank">Landmarks should have a unique role or role/label/title (i.e. accessible name) combination</a></p>
+        <p><strong>Tags:</strong> cat.semantics, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;nav class="breadcrumb container" role="navigation" aria-labelledby="system-breadcrumb"&gt;</div>
+            <p class="target"><strong>Target:</strong> .breadcrumb</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable</div>
+        </div>
+    </div>
+</body>
+</html>
