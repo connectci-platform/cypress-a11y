@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .category { font-weight: bold; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-bottom: 5px; }
+        .category-error { background-color: #f8d7da; color: #721c24; }
+        .category-warning { background-color: #fff3cd; color: #856404; }
+        .violation.category-warning { border-right: 5px solid #ffc107; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://ondemand.ddev.site/contributor-wall</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 3/27/2026, 7:54:14 PM</p>
+        <p><strong>Total Violations:</strong> 2</p>
+        <h3>Errors (WCAG 2.1 AA - Compliance Required)</h3>
+        <p><strong>Critical:</strong> 0 | <strong>Serious:</strong> 0 | <strong>Moderate:</strong> 0 | <strong>Minor:</strong> 0</p>
+        <h3>Warnings (WCAG 2.2 / Best Practices)</h3>
+        <p><strong>Critical:</strong> 0 | <strong>Serious:</strong> 0 | <strong>Moderate:</strong> 1 | <strong>Minor:</strong> 1</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation minor category-warning">
+        <h3>image-redundant-alt - Alternative text of images should not be repeated as text</h3>
+        <p class="category category-warning">Warning (WCAG 2.2/Best Practice)</p>
+        <p class="impact minor">Impact: minor</p>
+        <p><strong>Description:</strong> Ensure image alternative is not repeated as text</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/image-redundant-alt?application=axeAPI" target="_blank">Alternative text of images should not be repeated as text</a></p>
+        <p><strong>Tags:</strong> cat.text-alternatives, best-practice</p>
+        <h4>Affected Elements (67)</h4>
+
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/glasses-cropped-small.JPG" alt="Dori Sajdak" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(1) > .people-grid-link[href="/community-persona/973"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Dori Sajdak"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/chalker_alan_2022_600.jpg" alt="Alan Chalker" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(2) > .people-grid-link[href="/community-persona/2037"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Alan Chalker"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Jeff Ohrstrom" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(3) > .people-grid-link[href="/community-persona/2281"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Jeff Ohrstrom"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/Moffat13csmall.jpg" alt="Emily Moffat Sadeghi" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(4) > .people-grid-link[href="/community-persona/30939"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Emily Moffat Sadeghi"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/Media.jpeg" alt="Aaron Janssen" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(5) > .people-grid-link[href="/community-persona/32973"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Aaron Janssen"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Xavier PILLONS" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(6) > .people-grid-link[href="/community-persona/43828"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Xavier PILLONS"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/new-headshot-mrobbert-cropped%202%20%281%29.jpeg" alt="Mike Robbert" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(7) > .people-grid-link[href="/community-persona/48156"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Mike Robbert"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Braeden Singleton" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(8) > .people-grid-link[href="/community-persona/61929"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Braeden Singleton"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/julie-ma_0.jpg" alt="Julie Ma" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .discourse-participants-block > .people-grid-list > .people-grid-item.text-center:nth-child(1) > .people-grid-link[href="/community-persona/100"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Julie Ma"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/glasses-cropped-small.JPG" alt="Dori Sajdak" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .discourse-participants-block > .people-grid-list > .people-grid-item.text-center:nth-child(2) > .people-grid-link[href="/community-persona/973"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Dori Sajdak"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/chalker_alan_2022_600.jpg" alt="Alan Chalker" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .discourse-participants-block > .people-grid-list > .people-grid-item.text-center:nth-child(3) > .people-grid-link[href="/community-persona/2037"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Alan Chalker"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Jeff Ohrstrom" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(4) > .people-grid-link[href="/community-persona/2281"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Jeff Ohrstrom"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/20230503anderson4-4K_cropped.jpg" alt="Sean Anderson" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(5) > .people-grid-link[href="/community-persona/3465"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Sean Anderson"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/Moffat13csmall.jpg" alt="Emily Moffat Sadeghi" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(6) > .people-grid-link[href="/community-persona/30939"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Emily Moffat Sadeghi"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/Media.jpeg" alt="Aaron Janssen" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(7) > .people-grid-link[href="/community-persona/32973"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Aaron Janssen"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/profile_picture.jpeg" alt="Amanda Black" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .discourse-participants-block > .people-grid-list > .people-grid-item.text-center:nth-child(8) > .people-grid-link[href="/community-persona/43365"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Amanda Black"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/new-headshot-mrobbert-cropped%202%20%281%29.jpeg" alt="Mike Robbert" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(9) > .people-grid-link[href="/community-persona/48156"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Mike Robbert"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Bradley Paynter" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Bradley Paynter"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Ashley Dederich" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Ashley Dederich"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Anthony Lee" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Anthony Lee"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Braeden Singleton" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(13) > .people-grid-link[href="/community-persona/61929"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Braeden Singleton"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Brian McNally" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Brian McNally"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Shane Corder" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Shane Corder"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/social_auth_google_111157435535790279052.jpg" alt="Lissie Fein" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(1) > .people-grid-link[href="/community-persona/1995"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Lissie Fein"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Keegan Smith" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Keegan Smith"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Miles France" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Miles France"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/20230503anderson4-4K_cropped.jpg" alt="Sean Anderson" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .contributors-block.people-grid-block.people-grid-block--scrollable > .people-grid-list > .people-grid-item.text-center:nth-child(4) > .people-grid-link[href="/community-persona/3465"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Sean Anderson"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="William Horka" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(5) > .people-grid-link[href="/community-persona/48134"] > .people-grid-photo > .profile-photo.rounded-custom[alt="William Horka"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Paula Sanematsu" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Paula Sanematsu"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/julie-ma_0.jpg" alt="Julie Ma" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .committee-members-block > .people-grid-list > .people-grid-item.text-center:nth-child(1) > .people-grid-link[href="/community-persona/100"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Julie Ma"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Jeff Ohrstrom" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(2) > .people-grid-link[href="/community-persona/2281"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Jeff Ohrstrom"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/me_and_groucho.jpeg" alt="Travis Ravert" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(3) > .people-grid-link[href="/community-persona/2292"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Travis Ravert"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/20230503anderson4-4K_cropped.jpg" alt="Sean Anderson" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .committee-members-block > .people-grid-list > .people-grid-item.text-center:nth-child(4) > .people-grid-link[href="/community-persona/3465"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Sean Anderson"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Amanda Black" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/community-persona/25826"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Amanda Black"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Brandon Biggs" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(6) > .people-grid-link[href="/community-persona/43373"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Brandon Biggs"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Amy He" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Amy He"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Tom Krobatsch" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(8) > .people-grid-link[href="/community-persona/44058"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Tom Krobatsch"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Sarah Duncan" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(9) > .people-grid-link[href="/community-persona/45574"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Sarah Duncan"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Joe Ryan" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Joe Ryan"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/profile_picture.jpeg" alt="Amanda Black" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(2) > .people-grid-link[href="/community-persona/43365"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Amanda Black"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Huston Rogers" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(3) > .people-grid-link[href="/community-persona/45256"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Huston Rogers"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/julie-ma_0.jpg" alt="Julie Ma" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(4) > .people-grid-link[href="/community-persona/100"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Julie Ma"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Xavier PILLONS" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(5) > .people-grid-link[href="/community-persona/43828"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Xavier PILLONS"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/matt.png" alt="Matt Larson" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Matt Larson"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Arsalan Akhter" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(7) > .people-grid-link[href="/community-persona/44472"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Arsalan Akhter"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/20230503anderson4-4K_cropped.jpg" alt="Sean Anderson" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(8) > .people-grid-link[href="/community-persona/3465"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Sean Anderson"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/social_auth_google_111157435535790279052.jpg" alt="Lissie Fein" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(9) > .people-grid-link[href="/community-persona/1995"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Lissie Fein"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Lissie C. Fein" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Lissie C. Fein"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Karen Tomko" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Karen Tomko"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Dhruva Chakravorty" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Dhruva Chakravorty"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/julie-ma_0.jpg" alt="Julie Ma" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .good-committee-block > .people-grid-list > .people-grid-item.text-center:nth-child(1) > .people-grid-link[href="/community-persona/100"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Julie Ma"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/glasses-cropped-small.JPG" alt="Dori Sajdak" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .good-committee-block > .people-grid-list > .people-grid-item.text-center:nth-child(2) > .people-grid-link[href="/community-persona/973"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Dori Sajdak"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/chalker_alan_2022_600.jpg" alt="Alan Chalker" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .good-committee-block > .people-grid-list > .people-grid-item.text-center:nth-child(3) > .people-grid-link[href="/community-persona/2037"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Alan Chalker"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="David Carlson" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="David Carlson"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/me_and_groucho.jpeg" alt="Travis Ravert" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(5) > .people-grid-link[href="/community-persona/2292"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Travis Ravert"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/20230503anderson4-4K_cropped.jpg" alt="Sean Anderson" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(6) > .people-grid-link[href="/community-persona/3465"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Sean Anderson"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/Moffat13csmall.jpg" alt="Emily Moffat Sadeghi" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(7) > .people-grid-link[href="/community-persona/30939"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Emily Moffat Sadeghi"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/profile_picture.jpeg" alt="Amanda Black" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .good-committee-block > .people-grid-list > .people-grid-item.text-center:nth-child(8) > .people-grid-link[href="/community-persona/43365"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Amanda Black"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Tom Krobatsch" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(9) > .people-grid-link[href="/community-persona/44058"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Tom Krobatsch"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Arsalan Akhter" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(10) > .people-grid-link[href="/community-persona/44472"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Arsalan Akhter"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Huston Rogers" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(11) > .people-grid-link[href="/community-persona/45256"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Huston Rogers"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Sarah Duncan" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(12) > .people-grid-link[href="/community-persona/45574"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Sarah Duncan"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Em Dragowsky" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> img[alt="Em Dragowsky"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="https://ondemand.ddev.site/sites/default/files/pictures/20230503anderson4-4K_cropped.jpg" alt="Sean Anderson" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(1) > .people-grid-link[href="/community-persona/3465"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Sean Anderson"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Brandon Biggs" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(2) > .people-grid-link[href="/community-persona/43373"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Brandon Biggs"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="Xavier PILLONS" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(3) > .people-grid-link[href="/community-persona/43828"] > .people-grid-photo > .profile-photo.rounded-custom[alt="Xavier PILLONS"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img src="modules/custom/access/modules/cssn/images/profile.gif" alt="William Horka" class="profile-photo rounded-custom"&gt;</div>
+            <p class="target"><strong>Target:</strong> .people-grid-item.text-center:nth-child(4) > .people-grid-link[href="/community-persona/48134"] > .people-grid-photo > .profile-photo.rounded-custom[alt="William Horka"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+    </div>
+    <div class="violation moderate category-warning">
+        <h3>region - All page content should be contained by landmarks</h3>
+        <p class="category category-warning">Warning (WCAG 2.2/Best Practice)</p>
+        <p class="impact moderate">Impact: moderate</p>
+        <p><strong>Description:</strong> Ensure all page content is contained by landmarks</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI" target="_blank">All page content should be contained by landmarks</a></p>
+        <p><strong>Tags:</strong> cat.keyboard, best-practice</p>
+        <h4>Affected Elements (1)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a class="ood-feedback-btn" href="mailto:openondemand@sweetandfizzy.com?subject=Open%20OnDemand%20Community%20Hub%20Feedback" title="Let us know if you see something that doesn't look right or send us suggestions for improvements."&gt;</div>
+            <p class="target"><strong>Target:</strong> .ood-feedback-btn</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Some page content is not contained by landmarks</div>
+        </div>
+    </div>
+</body>
+</html>
