@@ -1,0 +1,13 @@
+spec,url,total_violations,errors_critical,errors_serious,errors_moderate,errors_minor,warnings_critical,warnings_serious,warnings_moderate,warnings_minor,csv,html
+"","https://ccmnet.ddev.site/",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_.csv","spec__https___ccmnet_ddev_site_.html"
+"","https://ccmnet.ddev.site/mentorships",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_mentorships.csv","spec__https___ccmnet_ddev_site_mentorships.html"
+"","https://ccmnet.ddev.site/members",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_members.csv","spec__https___ccmnet_ddev_site_members.html"
+"","https://ccmnet.ddev.site/about-ccmnet",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_about_ccmnet.csv","spec__https___ccmnet_ddev_site_about_ccmnet.html"
+"","https://ccmnet.ddev.site/about-us/annual-meeting",0,0,0,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_about_us_annual_meeting.csv","spec__https___ccmnet_ddev_site_about_us_annual_meeting.html"
+"","https://ccmnet.ddev.site/user/register",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_user_register.csv","spec__https___ccmnet_ddev_site_user_register.html"
+"","https://ccmnet.ddev.site/user/login",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_user_login.csv","spec__https___ccmnet_ddev_site_user_login.html"
+"","https://ccmnet.ddev.site/affinity-groups/ccmnet-mentoring",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_affinity_groups_ccmnet_mentoring.csv","spec__https___ccmnet_ddev_site_affinity_groups_ccmnet_mentoring.html"
+"","https://ccmnet.ddev.site/affinity-groups",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_affinity_groups.csv","spec__https___ccmnet_ddev_site_affinity_groups.html"
+"","https://ccmnet.ddev.site/knowledge-base/resources/mentorship",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_knowledge_base_resources_mentorship.csv","spec__https___ccmnet_ddev_site_knowledge_base_resources_mentorship.html"
+"","https://ccmnet.ddev.site/knowledge-base/resources",2,0,1,0,0,0,0,1,0,"spec__https___ccmnet_ddev_site_knowledge_base_resources.csv","spec__https___ccmnet_ddev_site_knowledge_base_resources.html"
+"","https://ccmnet.ddev.site/tags",1,0,1,0,0,0,0,0,0,"spec__https___ccmnet_ddev_site_tags.csv","spec__https___ccmnet_ddev_site_tags.html"
