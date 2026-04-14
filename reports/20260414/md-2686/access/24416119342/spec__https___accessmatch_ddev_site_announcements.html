@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .category { font-weight: bold; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-bottom: 5px; }
+        .category-error { background-color: #f8d7da; color: #721c24; }
+        .category-warning { background-color: #fff3cd; color: #856404; }
+        .violation.category-warning { border-right: 5px solid #ffc107; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://accessmatch.ddev.site/announcements</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 4/14/2026, 6:36:25 PM</p>
+        <p><strong>Total Violations:</strong> 1</p>
+        <h3>Errors (WCAG 2.1 AA - Compliance Required)</h3>
+        <p><strong>Critical:</strong> 0 | <strong>Serious:</strong> 0 | <strong>Moderate:</strong> 0 | <strong>Minor:</strong> 0</p>
+        <h3>Warnings (WCAG 2.2 / Best Practices)</h3>
+        <p><strong>Critical:</strong> 0 | <strong>Serious:</strong> 0 | <strong>Moderate:</strong> 0 | <strong>Minor:</strong> 1</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation minor category-warning">
+        <h3>image-redundant-alt - Alternative text of images should not be repeated as text</h3>
+        <p class="category category-warning">Warning (WCAG 2.2/Best Practice)</p>
+        <p class="impact minor">Impact: minor</p>
+        <p><strong>Description:</strong> Ensure image alternative is not repeated as text</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/image-redundant-alt?application=axeAPI" target="_blank">Alternative text of images should not be repeated as text</a></p>
+        <p><strong>Tags:</strong> cat.text-alternatives, best-practice</p>
+        <h4>Affected Elements (6)</h4>
+
+        <div class="node">
+            <div class="code">&lt;img loading="lazy" src="/sites/default/files/styles/landscape__480x220__keep_ratio_/public/2025-01/file%20-%202025-01-09T114653.448.png?itok=qwPVbF59" width="459" height="220" alt="Announcing the Redesigned Resources Page" class="image-style-landscape__480x220__keep-ratio-"&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/node/9888"] > .mb-4.block > .image-style-landscape__480x220__keep-ratio-[width="459"][height="220"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img loading="lazy" src="/sites/default/files/styles/landscape__480x220__keep_ratio_/public/2025-01/file%20-%202025-01-09T124934.018.png?itok=2BnbYhUj" width="459" height="220" alt="Maximize ACCESS Proposals Top 90" class="image-style-landscape__480x220__keep-ratio-"&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/node/9896"] > .mb-4.block > .image-style-landscape__480x220__keep-ratio-[width="459"][height="220"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img loading="lazy" src="/sites/default/files/styles/landscape__480x220__keep_ratio_/public/2025-01/file%20%2865%29.jpg?itok=uj7HCLPd" width="459" height="220" alt="ACCESS Resources Available for Classroom Use" class="image-style-landscape__480x220__keep-ratio-"&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/node/9897"] > .mb-4.block > .image-style-landscape__480x220__keep-ratio-[width="459"][height="220"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img loading="lazy" src="/sites/default/files/styles/landscape__480x220__keep_ratio_/public/2025-01/file%20%2866%29.jpg?itok=AaPp5L6-" width="459" height="220" alt="Celebrate inclusion with ACCESS at the Tapia conference" class="image-style-landscape__480x220__keep-ratio-"&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/node/9898"] > .mb-4.block > .image-style-landscape__480x220__keep-ratio-[width="459"][height="220"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img loading="lazy" src="/sites/default/files/styles/landscape__480x220__keep_ratio_/public/2025-01/file%20-%202025-01-09T124655.800.png?itok=SG4Tr3f4" width="459" height="220" alt="Discover ACCESS resources for education" class="image-style-landscape__480x220__keep-ratio-"&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/node/9899"] > .mb-4.block > .image-style-landscape__480x220__keep-ratio-[width="459"][height="220"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;img loading="lazy" src="/sites/default/files/styles/landscape__480x220__keep_ratio_/public/2025-01/file%20%2867%29.jpg?itok=tPiFujvD" width="459" height="220" alt="Remember to cite ACCESS in your research papers." class="image-style-landscape__480x220__keep-ratio-"&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="/node/9900"] > .mb-4.block > .image-style-landscape__480x220__keep-ratio-[width="459"][height="220"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix all of the following:<br>  Element contains <img> element with alt text that duplicates existing text</div>
+        </div>
+    </div>
+</body>
+</html>
