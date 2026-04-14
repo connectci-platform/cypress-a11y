@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .violation { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        .critical { border-left: 5px solid #d9534f; }
+        .serious { border-left: 5px solid #f0ad4e; }
+        .moderate { border-left: 5px solid #5bc0de; }
+        .minor { border-left: 5px solid #5cb85c; }
+        .impact { font-weight: bold; }
+        .impact.critical { color: #d9534f; }
+        .impact.serious { color: #f0ad4e; }
+        .impact.moderate { color: #5bc0de; }
+        .impact.minor { color: #5cb85c; }
+        .category { font-weight: bold; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-bottom: 5px; }
+        .category-error { background-color: #f8d7da; color: #721c24; }
+        .category-warning { background-color: #fff3cd; color: #856404; }
+        .violation.category-warning { border-right: 5px solid #ffc107; }
+        .node { border-left: 3px solid #eee; padding-left: 15px; margin: 10px 0; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; white-space: pre-wrap; overflow-wrap: break-word; }
+        .target { font-family: monospace; margin-top: 5px; }
+        .failure-summary { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Accessibility Test Results</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>URL:</strong> https://ccmnet.ddev.site/tags</p>
+        <p><strong>Test Spec:</strong> N/A</p>
+        <p><strong>Date:</strong> 4/14/2026, 8:36:54 PM</p>
+        <p><strong>Total Violations:</strong> 1</p>
+        <h3>Errors (WCAG 2.1 AA - Compliance Required)</h3>
+        <p><strong>Critical:</strong> 0 | <strong>Serious:</strong> 1 | <strong>Moderate:</strong> 0 | <strong>Minor:</strong> 0</p>
+        <h3>Warnings (WCAG 2.2 / Best Practices)</h3>
+        <p><strong>Critical:</strong> 0 | <strong>Serious:</strong> 0 | <strong>Moderate:</strong> 0 | <strong>Minor:</strong> 0</p>
+    </div>
+<h2>Violations</h2>
+    <div class="violation serious category-error">
+        <h3>color-contrast - Elements must meet minimum color contrast ratio thresholds</h3>
+        <p class="category category-error">Error (WCAG 2.1 AA)</p>
+        <p class="impact serious">Impact: serious</p>
+        <p><strong>Description:</strong> Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
+        <p><strong>Help:</strong> <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI" target="_blank">Elements must meet minimum color contrast ratio thresholds</a></p>
+        <p><strong>Tags:</strong> cat.color, wcag2aa, wcag143, TTv5, TT13.c, EN-301-549, EN-9.1.4.3, ACT</p>
+        <h4>Affected Elements (15)</h4>
+
+        <div class="node">
+            <div class="code">&lt;a href="#admin-and-support" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Admin and Support&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#admin-and-support"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#ai-ml" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;AI/ML&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#ai-ml"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#analysis-and-algorithms" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Analysis and Algorithms&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#analysis-and-algorithms"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#cloud" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Cloud&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#cloud"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#data-storage" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Data Storage&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#data-storage"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#domain-tools" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Domain Tools&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#domain-tools"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#gateways-and-portals" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Gateways and Portals&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#gateways-and-portals"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#linux-and-shell-scripting" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Linux and Shell Scripting&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href="#linux-and-shell-scripting"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#nsf-access" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;NSF ACCESS&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#nsf-access"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#nsf-access-resources" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;NSF ACCESS Resources&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#nsf-access-resources"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#programming" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Programming&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#programming"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#schedulers" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Schedulers&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#schedulers"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#science-domains" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Science Domains&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#science-domains"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#security" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Security&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#security"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+        <div class="node">
+            <div class="code">&lt;a href="#software-installations" class="block font-base font-semibold leading-tight py-2 text-white-er no-underline hover--underline hover--text-light-teal"&gt;Software Installations&lt;/a&gt;</div>
+            <p class="target"><strong>Target:</strong> a[href$="#software-installations"]</p>
+            <div class="failure-summary"><strong>Failure Summary:</strong><br>Fix any of the following:<br>  Element has insufficient color contrast of 3.96 (foreground color: #0489ba, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</div>
+        </div>
+    </div>
+</body>
+</html>
