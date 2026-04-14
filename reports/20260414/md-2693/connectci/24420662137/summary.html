@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Test Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2 { margin-top: 20px; }
+        .summary { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; position: sticky; top: 0; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
+        .critical { color: #d9534f; font-weight: bold; }
+        .serious { color: #f0ad4e; font-weight: bold; }
+        .moderate { color: #5bc0de; }
+        .minor { color: #5cb85c; }
+        .no-violations { color: #5cb85c; font-weight: bold; }
+        .filter-container { margin-bottom: 15px; }
+        .search { padding: 8px; width: 300px; margin-right: 10px; }
+        .sort-btn { padding: 8px; background: #f2f2f2; border: 1px solid #ddd; cursor: pointer; }
+        .sort-btn:hover { background: #e2e2e2; }
+        .timestamp { font-size: 0.85em; color: #777; }
+        .sticky-header { position: sticky; top: 0; background: white; padding: 10px 0; z-index: 1000; }
+        .auto-refresh { display: flex; align-items: center; margin-left: 20px; }
+    </style>
+</head>
+<body>
+    <div class="sticky-header">
+        <h1>Accessibility Test Summary</h1>
+        <div class="filter-container">
+            <input type="text" id="searchInput" class="search" placeholder="Search specs, URLs, issues...">
+            <button class="sort-btn" onclick="sortTable('violations', 'desc')">Most Violations</button>
+            <button class="sort-btn" onclick="sortTable('timestamp', 'desc')">Most Recent</button>
+            <button class="sort-btn" onclick="sortTable('specName', 'asc')">By Spec Name</button>
+            <label class="auto-refresh">
+                <input type="checkbox" id="autoRefresh"> Auto-refresh (30s)
+            </label>
+        </div>
+    </div>
+
+    <div class="summary">
+        <h2>Overview</h2>
+        <p><strong>Total Tests:</strong> 9</p>
+        <p><strong>Total Violations:</strong> 1</p>
+        <h3>Errors (WCAG 2.1 AA - Compliance Required)</h3>
+        <p>
+            <span class="critical">Critical: 0</span> |
+            <span class="serious">Serious: 0</span> |
+            <span class="moderate">Moderate: 0</span> |
+            <span class="minor">Minor: 0</span>
+        </p>
+        <h3>Warnings (WCAG 2.2 / Best Practices)</h3>
+        <p>
+            <span class="critical">Critical: 0</span> |
+            <span class="serious">Serious: 0</span> |
+            <span class="moderate">Moderate: 1</span> |
+            <span class="minor">Minor: 0</span>
+        </p>
+        <p><strong>Last Generated:</strong> 4/14/2026, 8:45:33 PM</p>
+    </div>
+
+    <h2>Test Reports</h2>
+    <table id="reportTable">
+        <thead>
+            <tr>
+                <th>Spec Name</th>
+                <th>Page URL</th>
+                <th>Total</th>
+                <th colspan="4">Errors (WCAG 2.1 AA)</th>
+                <th colspan="4">Warnings</th>
+                <th>Reports</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Crit</th>
+                <th>Ser</th>
+                <th>Mod</th>
+                <th>Min</th>
+                <th>Crit</th>
+                <th>Ser</th>
+                <th>Mod</th>
+                <th>Min</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/user/password" data-violations="1" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/user/password" target="_blank">https://connectci.ddev.site/user/password</a></td>
+                <td class="critical">1</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="moderate">1</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_user_password.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_user_password.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/" data-violations="0" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/" target="_blank">https://connectci.ddev.site/</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/connectci-privacy-policy" data-violations="0" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/connectci-privacy-policy" target="_blank">https://connectci.ddev.site/connectci-privacy-policy</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_connectci_privacy_policy.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_connectci_privacy_policy.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/code-of-conduct" data-violations="0" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/code-of-conduct" target="_blank">https://connectci.ddev.site/code-of-conduct</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_code_of_conduct.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_code_of_conduct.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/user/login" data-violations="0" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/user/login" target="_blank">https://connectci.ddev.site/user/login</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_user_login.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_user_login.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/user/register" data-violations="0" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/user/register" target="_blank">https://connectci.ddev.site/user/register</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_user_register.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_user_register.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/user/register/student" data-violations="0" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/user/register/student" target="_blank">https://connectci.ddev.site/user/register/student</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_user_register_student.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_user_register_student.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/user/register/rcf" data-violations="0" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/user/register/rcf" target="_blank">https://connectci.ddev.site/user/register/rcf</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_user_register_rcf.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_user_register_rcf.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+            <tr data-spec="Unnamed Test" data-url="https://connectci.ddev.site/contact/connect_ci" data-violations="0" data-errors="0" data-timestamp="2026-04-14T20:45:33.319Z">
+                <td>Unnamed Test</td>
+                <td><a href="https://connectci.ddev.site/contact/connect_ci" target="_blank">https://connectci.ddev.site/contact/connect_ci</a></td>
+                <td class="no-violations">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td class="">0</td>
+                <td>
+                    <a href="./spec__https___connectci_ddev_site_contact_connect_ci.html">HTML</a> |
+                    <a href="./spec__https___connectci_ddev_site_contact_connect_ci.csv" target="_blank">CSV</a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <script>
+        function sortTable(column, direction) {
+            const table = document.getElementById('reportTable');
+            const rows = Array.from(table.querySelectorAll('tbody tr'));
+            const sortedRows = rows.sort((a, b) => {
+                let aValue, bValue;
+
+                if (column === 'specName') {
+                    aValue = a.cells[0].textContent;
+                    bValue = b.cells[0].textContent;
+                    return direction === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+                } else if (column === 'violations') {
+                    aValue = parseInt(a.getAttribute('data-violations'), 10);
+                    bValue = parseInt(b.getAttribute('data-violations'), 10);
+                } else if (column === 'timestamp') {
+                    aValue = new Date(a.getAttribute('data-timestamp')).getTime();
+                    bValue = new Date(b.getAttribute('data-timestamp')).getTime();
+                }
+
+                if (direction === 'asc') {
+                    return aValue - bValue;
+                } else {
+                    return bValue - aValue;
+                }
+            });
+
+            // Remove existing rows
+            rows.forEach(row => row.remove());
+
+            // Add sorted rows
+            sortedRows.forEach(row => {
+                table.querySelector('tbody').appendChild(row);
+            });
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#reportTable tbody tr');
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                const spec = row.getAttribute('data-spec').toLowerCase();
+                const url = row.getAttribute('data-url').toLowerCase();
+
+                if (text.includes(searchTerm) || spec.includes(searchTerm) || url.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Auto-refresh functionality
+        document.getElementById('autoRefresh').addEventListener('change', function() {
+            if (this.checked) {
+                window.refreshTimer = setInterval(() => {
+                    location.reload();
+                }, 30000); // 30 seconds
+            } else if (window.refreshTimer) {
+                clearInterval(window.refreshTimer);
+            }
+        });
+    </script>
+</body>
+</html>
+            
