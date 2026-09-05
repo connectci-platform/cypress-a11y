@@ -1,0 +1,2 @@
+category,impact,id,description,help,helpUrl,tags,html,target,failureSummary
+warning,minor,aria-allowed-role,"Ensure role attribute has an appropriate value for the element","ARIA role should be appropriate for the element","https://dequeuniversity.com/rules/axe/4.10/aria-allowed-role?application=axeAPI","cat.aria;best-practice","<form role=\"combobox\" aria-expanded=\"false\" aria-haspopup=\"listbox\" aria-labelledby=\"downshift-0-label\">","form[role=\"combobox\"]","Fix any of the following:\n  ARIA role combobox is not allowed for given element"
