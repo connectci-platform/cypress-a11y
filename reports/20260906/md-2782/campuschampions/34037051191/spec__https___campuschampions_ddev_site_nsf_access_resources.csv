@@ -1,0 +1,2 @@
+category,impact,id,description,help,helpUrl,tags,html,target,failureSummary
+warning,moderate,heading-order,"Ensure the order of headings is semantically correct","Heading levels should only increase by one","https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI","cat.semantics;best-practice","<h3>Champions</h3>",".col:nth-child(1) > h3","Fix any of the following:\n  Heading order invalid"
