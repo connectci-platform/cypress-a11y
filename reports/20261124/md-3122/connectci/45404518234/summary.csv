@@ -1,0 +1,10 @@
+spec,url,total_violations,errors_critical,errors_serious,errors_moderate,errors_minor,warnings_critical,warnings_serious,warnings_moderate,warnings_minor,csv,html
+"","https://connectci.ddev.site/",0,0,0,0,0,0,0,0,0,"spec__https___connectci_ddev_site_.csv","spec__https___connectci_ddev_site_.html"
+"","https://connectci.ddev.site/connectci-privacy-policy",0,0,0,0,0,0,0,0,0,"spec__https___connectci_ddev_site_connectci_privacy_policy.csv","spec__https___connectci_ddev_site_connectci_privacy_policy.html"
+"","https://connectci.ddev.site/code-of-conduct",0,0,0,0,0,0,0,0,0,"spec__https___connectci_ddev_site_code_of_conduct.csv","spec__https___connectci_ddev_site_code_of_conduct.html"
+"","https://connectci.ddev.site/user/login",0,0,0,0,0,0,0,0,0,"spec__https___connectci_ddev_site_user_login.csv","spec__https___connectci_ddev_site_user_login.html"
+"","https://connectci.ddev.site/user/password",1,0,0,0,0,0,0,1,0,"spec__https___connectci_ddev_site_user_password.csv","spec__https___connectci_ddev_site_user_password.html"
+"","https://connectci.ddev.site/user/register",0,0,0,0,0,0,0,0,0,"spec__https___connectci_ddev_site_user_register.csv","spec__https___connectci_ddev_site_user_register.html"
+"","https://connectci.ddev.site/user/register/student",0,0,0,0,0,0,0,0,0,"spec__https___connectci_ddev_site_user_register_student.csv","spec__https___connectci_ddev_site_user_register_student.html"
+"","https://connectci.ddev.site/user/register/rcf",0,0,0,0,0,0,0,0,0,"spec__https___connectci_ddev_site_user_register_rcf.csv","spec__https___connectci_ddev_site_user_register_rcf.html"
+"","https://connectci.ddev.site/contact/connect_ci",0,0,0,0,0,0,0,0,0,"spec__https___connectci_ddev_site_contact_connect_ci.csv","spec__https___connectci_ddev_site_contact_connect_ci.html"
